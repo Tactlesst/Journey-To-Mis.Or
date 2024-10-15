@@ -4403,6 +4403,7 @@ img#popup-image{
 }
 /* Map container styling */
 #map-container {
+    margin-left: 500px;
     width: 400px;
     height: 400px;
     position: relative;
@@ -4442,6 +4443,8 @@ img#popup-image{
 
 /* Style for the redirect button */
 #redirect-button {
+    margin-left: 600px;
+    margin-bottom: 50px;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #4CAF50;

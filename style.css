@@ -4395,7 +4395,10 @@ body {
 /*=============================
 	leaflet Area
 ===============================*/
-
+.Leaflef-map{
+    padding: 0px;
+    margin: 0px;
+}
 /* General page styling */
 img#popup-image{
     width: 200px;
@@ -4444,8 +4447,8 @@ img#popup-image{
 /* Style for the redirect button */
 #redirect-button {
     margin-left: 600px;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 50px;
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;

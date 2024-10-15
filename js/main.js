@@ -269,22 +269,6 @@ $(".hero-slider").owlCarousel({
             verticalOffset: 0,
         });
 
-        /*=======================
-			RTL Version JS
-		=========================*/
-        // When the RTL Version is clicked
-        $(".rtl-btn").on("click", function() {
-            $("body").addClass("rtl"); // Add 'rtl' class to the body
-            $(this).addClass("active"); // Add 'active' class to the clicked element
-            $(".ltr-btn").removeClass("active"); // Remove 'active' class from the LTR element
-        });
-
-        // When the LTR Version is clicked
-        $(".ltr-btn").on("click", function() {
-            $("body").removeClass("rtl"); // Remove 'rtl' class from the body
-            $(this).addClass("active"); // Add 'active' class to the clicked element
-            $(".rtl-btn").removeClass("active"); // Remove 'active' class from the RTL element
-        });
     });
 
     /*====================

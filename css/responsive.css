@@ -1298,4 +1298,31 @@
     .footer .footer-top {
         padding: 65px 0px;
     }
+    @media (max-width: 1024px) {
+        .get-quote {
+            float: none;
+            justify-content: center; /* Center buttons */
+        }
+    
+        .get-quote .btn {
+            width: 100px;
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .get-quote {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+    
+        .get-quote .btn {
+            width: 100%;
+            margin: 10px 0;
+            font-size: 14px;
+            height: 50px; 
+            line-height: 50px;
+        }
+    }
 }

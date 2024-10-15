@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet" />
-
+    <!-- leafleft -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Nice Select CSS -->
@@ -899,6 +900,21 @@
             </div>
         </section>
         <!--/ End Testimonials -->
+                                    <!-- Startleaflet-->
+                                    <section class="Leaflef=map">
+                                      <!-- Button to redirect the map to Balingasag -->
+                                      <button id="redirect-button">Go to Balingasag</button>
+          
+                                      <!-- Hidden image container for popup use -->
+                                      <div id="popup-image-container" style="display: none;">
+                                          <img id="popup-image" src="img/logo.png" alt="Location Image" />
+                                      </div>
+          
+                                      <div id="map-container">
+                                          <div id="map"></div>
+                                      </div>
+                                  </section>
+                                  <!-- Emdleaflet-->
 
         <!-- Start Departments -->
         <section class="departments section">
@@ -1443,31 +1459,31 @@
           <div class="col-lg-12 col-md-12 col-12">
             <div class="owl-carousel clients-slider">
               <div class="single-clients">
-                <img src="img/client1.jpg" alt="#" />
+                <img src="img/client1.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client2.jpg" alt="#" />
+                <img src="img/client2.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client3.jpg" alt="#" />
+                <img src="img/client3.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client4.jpg" alt="#" />
+                <img src="img/client4.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client5.jpg" alt="#" />
+                <img src="img/client5.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client1.jpg" alt="#" />
+                <img src="img/client1.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client2.jpg" alt="#" />
+                <img src="img/client2.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client3.jpg" alt="#" />
+                <img src="img/client3.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client4.jpg" alt="#" />
+                <img src="img/client4.png" alt="#" />
               </div>
             </div>
           </div>
@@ -1819,7 +1835,9 @@
                         <!-- Magnific Popup JS -->
                         <script src="js/jquery.magnific-popup.min.js"></script>
                         <!-- Main JS -->
+                         <script src="leaflet/leaflet.js"></script>
                         <script src="js/main.js"></script>
+                        <script src="leaflet.js"></script>
 </body>
 
 </html>

@@ -4392,5 +4392,77 @@ body {
 .header .widget-main {
     float: left;
 }
+/*=============================
+	leaflet Area
+===============================*/
 
+/* General page styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+    background-color: #f4f4f4; /* Optional background color */
+}
+img#popup-image{
+    width: 200px;
+    height: 140px;
+}
+/* Map container styling */
+#map-container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 2px solid #ccc; /* Optional border for visibility */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Prevents the content from overflowing */
+}
+
+/* Map element styling */
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom CSS to make zoom control icons smaller */
+.leaflet-control-zoom {
+    font-size: 12px; /* Adjust size of the icons */
+}
+
+.leaflet-control-zoom a {
+    width: 25px; /* Adjust width */
+    height: 25px; /* Adjust height */
+    line-height: 25px; /* Center the icon vertically */
+}
+
+.leaflet-control-zoom a .leaflet-control-zoom-in,
+.leaflet-control-zoom a .leaflet-control-zoom-out {
+    font-size: 14px; /* Adjust the icon size */
+    line-height: 25px; /* Center the icon */
+}
+
+/* Style for smaller images in the popup */
+.popup-image-container {
+    width: 40px;
+    height: 40px;
+}
+
+/* Style for the redirect button */
+#redirect-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#redirect-button:hover {
+    background-color: #45a049;
+}
 

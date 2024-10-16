@@ -36,6 +36,28 @@
         var opolName = "Opol, Misamis Oriental";
         var opolDetails = "Opol is another location in Misamis Oriental.";
 
+        // Marker data for Initao
+        var initaoLocation = [8.49750009121942, 124.30532455444337];
+        var initaoName = "Initao, Misamis Oriental";
+        var initaoDetails = "Initao is another location in Misamis Oriental.";
+
+        // Marker data for Lugait
+        var lugaitLocation = [8.342929683969652, 124.26013469696046];
+        var lugaitName = "Lugait, Misamis Oriental";
+        var lugaitDetails = "Lugait is another location in Misamis Oriental.";
+        
+        // Marker data for Laguindingan
+        var laguindinganLocation = [8.57461348506942, 124.44072246551515];
+        var laguindinganName = "laguindingan, Misamis Oriental";
+        var laguindinganDetails = "laguindingan is another location in Misamis Oriental.";
+        
+        // Marker data for Jasaan
+        var jasaanLocation = [8.64958987649745, 124.7542190551758];
+        var jasaanName = "jasaan, Misamis Oriental";
+        var jasaanDetails = "jasaan is another location in Misamis Oriental.";
+        
+
+
         /*-----VARIABLE DATA END------*/
 
         /*-----VARIABLE IMAGE START------*/
@@ -45,6 +67,10 @@
         var balingoanImageElement = document.getElementById('balingoan-image');
         var medinaImageElement = document.getElementById('medina-image');
         var opolImageElement = document.getElementById('opol-image');
+        var initaoImageElement = document.getElementById('initao-image');
+        var lugaitImageElement = document.getElementById('lugait-image');
+        var laguindinganImageElement = document.getElementById('laguindingan-image');
+        var jasaanImageElement = document.getElementById('jasaan-image');
         /*-----VARIABLE IMAGE END------*/
 
         /*-----CONTENT DESCRIPTION START------*/
@@ -81,10 +107,28 @@
         // Add marker for Opol
         var opolMarker = L.marker(opolLocation).addTo(map);
         opolMarker.bindPopup(getPopupContent(opolName, opolDetails, opolImageElement));
+
+        // Add marker for Lugait
+        var lugaitMarker = L.marker(lugaitLocation).addTo(map);
+        lugaitMarker.bindPopup(getPopupContent(lugaitName, lugaitDetails, lugaitImageElement));
+        
+
+        // Add marker for Initao
+        var initaoMarker = L.marker(initaoLocation).addTo(map);
+        initaoMarker.bindPopup(getPopupContent(initaoName, initaoDetails, initaoImageElement));
+
+        // Add marker for Laguindingan
+        var laguindinganMarker = L.marker(laguindinganLocation).addTo(map);
+        laguindinganMarker.bindPopup(getPopupContent(laguindinganName, laguindinganDetails, laguindinganImageElement));
+        
+        // Add marker for Jasaan
+        var jasaanMarker = L.marker(jasaanLocation).addTo(map);
+        jasaanMarker.bindPopup(getPopupContent(jasaanName, jasaanDetails, jasaanImageElement));
         
         /*-----MAP MARKER END------*/
 
         /*-----BUTTONS FUNCTION START------*/
+
         // Wait for the DOM to load before adding event listeners
         document.addEventListener('DOMContentLoaded', function() {
             // Event listener to redirect to Balingasag
@@ -115,11 +159,40 @@
                 medinaMarker.openPopup();
             });
 
-            // Event listener to redirect to medina
+            // Event listener to redirect to Opol
             document.getElementById('opol-button').addEventListener('click', function() {
                 console.log('opol button clicked');
                 map.setView(opolLocation, 13);
                 opolMarker.openPopup();
+            });
+            
+
+            // Event listener to redirect to Initao
+            document.getElementById('initao-button').addEventListener('click', function() {
+                console.log('initao button clicked');
+                map.setView(initaoLocation, 13);
+                initaoMarker.openPopup();
+            });
+
+            // Event listener to redirect to Lugait
+            document.getElementById('lugait-button').addEventListener('click', function() {
+                console.log('lugait button clicked');
+                map.setView(lugaitLocation, 13);
+                lugaitMarker.openPopup();
+            });
+
+            // Event listener to redirect to Laguindingan
+            document.getElementById('laguindingan-button').addEventListener('click', function() {
+                console.log('laguindingan button clicked');
+                map.setView(laguindinganLocation, 13);
+                laguindinganMarker.openPopup();
+            });
+            
+            // Event listener to redirect to Jasaan
+            document.getElementById('jasaan-button').addEventListener('click', function() {
+                console.log('jasaan button clicked');
+                map.setView(jasaanLocation, 13);
+                jasaanMarker.openPopup();
             });
             
             

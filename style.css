@@ -4417,6 +4417,7 @@ img#popup-image {
     border: 2px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
 }
 
 /* Map element styling */
@@ -4426,28 +4427,19 @@ img#popup-image {
 }
 
 /* Custom CSS to make zoom control icons smaller */
-.leaflet-control-zoom {
-    font-size: 12px;
-}
-
-.leaflet-control-zoom a {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-}
-
 .leaflet-control-zoom a .leaflet-control-zoom-in,
 .leaflet-control-zoom a .leaflet-control-zoom-out {
     font-size: 14px;
     line-height: 25px;
 }
 
+
 /* Style for smaller images in the popup */
 .popup-image-container {
     width: 40px;
     height: 40px;
 }
-
+/* Class to hide zoom controls */
 /* Style for the redirect buttons */
 #redirect-button ,#balingasag-button,#gingoog-button ,
 #balingoan-button,#initao-button,#jasaan-button,

@@ -5,7 +5,10 @@
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
+        
         osm.addTo(map);
+        
+        
         /*-----VARIABLE DATA START------*/
 
         // Marker data for Balingasag

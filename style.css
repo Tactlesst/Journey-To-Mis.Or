@@ -4393,26 +4393,30 @@ body {
     float: left;
 }
 /*=============================
-	leaflet Area
+    Leaflet Area
 ===============================*/
-.Leaflef-map{
+.Leaflef-map {
     padding: 0px;
     margin: 0px;
+    position: relative;
+    text-align: center;
 }
+
 /* General page styling */
-img#popup-image{
+img#popup-image {
     width: 200px;
     height: 140px;
 }
+
 /* Map container styling */
 #map-container {
-    margin-left: 500px;
+    margin: 0 auto; /* Center-align the map container */
     width: 400px;
     height: 400px;
     position: relative;
-    border: 2px solid #ccc; /* Optional border for visibility */
-    border-radius: 8px; /* Optional rounded corners */
-    overflow: hidden; /* Prevents the content from overflowing */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 /* Map element styling */
@@ -4423,19 +4427,19 @@ img#popup-image{
 
 /* Custom CSS to make zoom control icons smaller */
 .leaflet-control-zoom {
-    font-size: 12px; /* Adjust size of the icons */
+    font-size: 12px;
 }
 
 .leaflet-control-zoom a {
-    width: 25px; /* Adjust width */
-    height: 25px; /* Adjust height */
-    line-height: 25px; /* Center the icon vertically */
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
 }
 
 .leaflet-control-zoom a .leaflet-control-zoom-in,
 .leaflet-control-zoom a .leaflet-control-zoom-out {
-    font-size: 14px; /* Adjust the icon size */
-    line-height: 25px; /* Center the icon */
+    font-size: 14px;
+    line-height: 25px;
 }
 
 /* Style for smaller images in the popup */
@@ -4444,9 +4448,12 @@ img#popup-image{
     height: 40px;
 }
 
-/* Style for the redirect button */
-#redirect-button {
-    margin-left: 600px;
+/* Style for the redirect buttons */
+#redirect-button ,#balingasag-button,#gingoog-button ,
+#balingoan-button,#initao-button,#jasaan-button,
+#laguindingan-button,#lugait-button,#medina-button,
+#opol-button{
+    display: inline-block;
     margin-bottom: 10px;
     margin-top: 50px;
     padding: 10px 20px;
@@ -4458,7 +4465,11 @@ img#popup-image{
     font-size: 16px;
 }
 
+/* Button hover effect */
 #redirect-button:hover {
     background-color: #45a049;
 }
 
+/*=============================
+    Leaflet END
+===============================*/

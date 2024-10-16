@@ -1,3 +1,4 @@
+
         // Initialize the map centered on Balingasag, Misamis Oriental
         var map = L.map('map').setView([8.743003054482337, 124.77559089660646], 13); // Coordinates for Balingasag
 

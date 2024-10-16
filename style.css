@@ -4396,8 +4396,8 @@ body {
     Leaflet Area
 ===============================*/
 .Leaflef-map {
-    padding: 0px;
-    margin: 0px;
+    padding: 20px;
+    margin: 20px;
     position: relative;
     text-align: center;
 }

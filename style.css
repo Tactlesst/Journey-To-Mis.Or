@@ -535,14 +535,15 @@ body {
     margin-top: 600px;
     height: 230px;
     width: 80%;
-    margin: 0 auto;
-    
+    margin: 10px auto;
+
 }
 
 .schedule .schedule-inner {
     position: relative;
     transform: translateY(-50%);
     z-index: 9;
+    
 }
 
 .schedule .single-schedule {
@@ -557,6 +558,7 @@ body {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
+    
 }
 
 .schedule .single-schedule .inner {
@@ -4396,12 +4398,32 @@ body {
     Leaflet Area
 ===============================*/
 .Leaflef-map {
-    padding: 20px;
-    margin: 20px;
-    position: relative;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
-
+.Button-Placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .Button-Placeholder button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .Button-Placeholder button:hover {
+    background-color: #0056b3;
+  }
 /* General page styling */
 img#popup-image {
     width: 200px;
@@ -4424,8 +4446,26 @@ img#popup-image {
 #map {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
-
+/* Categories/Images Section */
+.Img-Placeholder {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .Img-Placeholder img {
+    width: 100%;
+    height: auto;
+    display: none; /* Hidden by default, shown when a button is clicked */
+  }
+  
+  .Img-Placeholder img.active {
+    display: block;
+  }
+  
 /* Custom CSS to make zoom control icons smaller */
 .leaflet-control-zoom a .leaflet-control-zoom-in,
 .leaflet-control-zoom a .leaflet-control-zoom-out {
@@ -4436,28 +4476,12 @@ img#popup-image {
 
 /* Style for smaller images in the popup */
 .popup-image-container {
-    width: 40px;
-    height: 40px;
-}
-/* Class to hide zoom controls */
-/* Style for the redirect buttons */
-#redirect-button ,#balingasag-button,#gingoog-button ,
-#balingoan-button,#initao-button,#jasaan-button,
-#laguindingan-button,#lugait-button,#medina-button,
-#opol-button{
-    display: inline-block;
-    margin-bottom: 10px;
-    margin-top: 50px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin-top: 20px;
 }
 
-/* Button hover effect */
 #redirect-button:hover {
     background-color: #45a049;
 }

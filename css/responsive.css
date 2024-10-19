@@ -1073,7 +1073,30 @@
     .footer .copyright {
         padding: 20px 0;
     }
-}
+
+        #map-container {
+            width: 100%;
+            height: 300px; 
+        }
+    
+        .Button-Placeholder button {
+            width: 100%; 
+            padding: 10px; 
+        }
+    
+        .float-child {
+            width: 100%; 
+            margin: 20px 0; 
+        }
+        .Img-Placeholder {
+            width: 100%;
+        }
+    
+        .popup-image-container {
+            height: auto;
+            max-width: 100%;
+        }
+    }
 
 /* Mobile Screen */
 
@@ -1344,4 +1367,26 @@
     .footer .footer-top {
         padding: 65px 0px;
     }
+        #map-container {
+            width: 100%; 
+            height: 300px; 
+        }
+    
+        .Button-Placeholder button {
+            width: 100%; 
+            padding: 10px; 
+        }
+    
+        .float-child {
+            width: 100%;
+            margin: 20px 0;
+        }
+    
+        .Img-Placeholder {
+            width: 100%;
+        }
+        .popup-image-container {
+            height: auto;
+            max-width: 100%;
+        }
 }

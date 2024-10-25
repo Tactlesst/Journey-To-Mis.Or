@@ -435,6 +435,7 @@ body {
 
 .slider .single-slider h1 span {
     color: #fefeff;
+    margin: 100px;
 }
 
 .slider .single-slider p {
@@ -866,7 +867,7 @@ body {
     bottom: 0;
     height: 2px;
     width: 50px;
-    background: #1a76d1;
+    background: #1a76d1e5;
 }
 
 .why-choose .choose-left p {

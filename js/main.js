@@ -270,6 +270,12 @@ $(".hero-slider").owlCarousel({
         });
 
     });
+        /*====================
+		Preloader JS
+	======================*/
+    $(window).on("load", function() {
+        $(".preloader").addClass("preloader-deactivate");
+    });
     document.getElementById('toggle-switch').addEventListener('change', function() {
         if (this.checked) {
             document.body.style.backgroundColor = 'white'; // Light mode
@@ -278,10 +284,5 @@ $(".hero-slider").owlCarousel({
         }
     });
     
-    /*====================
-		Preloader JS
-	======================*/
-    $(window).on("load", function() {
-        $(".preloader").addClass("preloader-deactivate");
-    });
+
 })(jQuery);

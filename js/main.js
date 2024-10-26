@@ -270,7 +270,14 @@ $(".hero-slider").owlCarousel({
         });
 
     });
-
+    document.getElementById('toggle-switch').addEventListener('change', function() {
+        if (this.checked) {
+            document.body.style.backgroundColor = 'white'; // Light mode
+        } else {
+            document.body.style.backgroundColor = '#121212'; // Dark mode
+        }
+    });
+    
     /*====================
 		Preloader JS
 	======================*/

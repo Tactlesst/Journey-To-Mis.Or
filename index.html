@@ -451,7 +451,22 @@
         </section>
         <!--/End Start schedule Area -->
                     <!-- Startleaflet-->
-                    <section class="Leaflef-map">
+                    <section class="Leaflef-map"> 
+                    <label class="switch">
+                      <input type="checkbox"id="toggle-switch">
+                      <span class="slider"></span>
+                      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIG/8QAIxAAAgIABQQDAAAAAAAAAAAAAQMCBAAREiExBUFRcROBsf/EABQBAQAAAAAAAAAAAAAAAAAAAAX/xAAWEQADAAAAAAAAAAAAAAAAAAAAEiL/2gAMAwEAAhEDEQA/AMBTp03dNglMVuttjqnKQ2UPOfntkOThbqVVUJ12BKnogZQZpy+Ucc8knwePWJrWqyqEHVmrTahEBqpbBoAH1n635wt3a9mjN1p8X2pw0qVEbKB/CO/c4OphSVP/2Q==" class="off">
+                      <img  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAQABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIEBf/EACMQAAEDAwQDAQEAAAAAAAAAAAQBAgUDESEAEjFBBlFhMkL/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGBEAAwEBAAAAAAAAAAAAAAAAABIiMUH/2gAMAwEAAhEDEQA/AM+Bg4mS8coRccMOdNG01qVyH/kRvHPKKmMdr8uujPwUTG+NkRpw1AKWCbvHKa2zTGphc9u9p0q+rLqeMl4kSCGkYgtoE0HTahIz3bWGNanPrdyqWzn7p5ibh5CArnyZNMyVLpK0QSkt2BNXtVX+7ol1wuLJiyaHt+6Kyp//2Q==" class="on">
+                    </label>
+                      <div class="dropdown-container">
+                      <ul class="menu">
+                        <li><label>Location:</label>
+                          <select name="subject" id="subject">
+                              <option value="" selected="selected" >Select Location</option>
+                          </select>
+                        </li>
+                    </ul>
+                  </div>
                       <!-- Map Placement leaflet -->
                       <div class="float-child">
                         <div id="map-container">
@@ -470,11 +485,6 @@
                       <button id="lugait-button">Go to Lugait</button>
                       <button id="medina-button">Go to Medina</button>
                       <button id="opol-button">Go to Opol</button>
-                    </div>
-                  </div>
-                  <div class="float-child">
-                    <div class="descriptions">
-                      <h1> Content What to do</h1>
                     </div>
                   </div>
                     <!-- Image of the places in Balingasag -->
@@ -668,7 +678,7 @@
                                 <a href="portfolio-details.html" class="btn">View Details</a>
                             </div>
                             <div class="single-pf">
-                                <img src="img/pf2.jpg" alt="#" />
+                                <img src="images/img/pf2.jpg" alt="#" />
                                 <a href="portfolio-details.html" class="btn">View Details</a>
                             </div>
                             <div class="single-pf">
@@ -1200,7 +1210,7 @@
                     <div class="col-lg-12">
                         <div class="section-title">
                             <h2>Keep up with Our Most Travel News.</h2>
-                            <img src="img/section-img.jpg" alt="#" />
+                            <img src="images/img/section-img.jpg" alt="#" />
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts
                             </p>
@@ -1377,31 +1387,31 @@
           <div class="col-lg-12 col-md-12 col-12">
             <div class="owl-carousel clients-slider">
               <div class="single-clients">
-                <img src="img/client1.png" alt="#" />
+                <img src="images/img/client1.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client2.png" alt="#" />
+                <img src="images/img/client2.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client3.png" alt="#" />
+                <img src="images/img/client3.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client4.png" alt="#" />
+                <img src="images/img/client4.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client5.png" alt="#" />
+                <img src="images/img/client5.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client1.png" alt="#" />
+                <img src="images/img/client1.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client2.png" alt="#" />
+                <img src="images/img/client2.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client3.png" alt="#" />
+                <img src="images/img/client3.png" alt="#" />
               </div>
               <div class="single-clients">
-                <img src="img/client4.png" alt="#" />
+                <img src="images/img/client4.png" alt="#" />
               </div>
             </div>
           </div>
@@ -1417,7 +1427,7 @@
           <div class="col-lg-12">
             <div class="section-title">
               <h2>We Are Always Ready to Help You. Book An Appointment</h2>
-              <img src="img/section-img.jpg" alt="#" />
+              <img src="images/img/section-img.jpg" alt="#" />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                 aliquet. pretiumts
@@ -1507,7 +1517,7 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="appointment-image">
-              <img src="img/contact-img.jpg" alt="#" />
+              <img src="images/img/contact-img.jpg" alt="#" />
             </div>
           </div>
         </div>
@@ -1566,6 +1576,9 @@
             <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer">
                 <h2>About Us</h2>
+                <div class="logo">
+                  <a href="index.html"><img src="images/img/rsz_logo.png" alt="#" /></a>
+                </div>
                 <p>
                   Lorem ipsum dolor sit am consectetur adipisicing elit do
                   eiusmod tempor incididunt ut labore dolore magna.
@@ -1718,7 +1731,7 @@
                         <!--/ End Copyright -->
                         </footer>
                         <!--/ End Footer Area -->
-
+                        <script src="cascading.js"></script>
                         <!-- jquery Min JS -->
                         <script src="js/jquery.min.js"></script>
                         <!-- jquery Migrate JS -->
@@ -1756,6 +1769,7 @@
                          <script src="js/leaflet/leaflet.js"></script>
                         <script src="js/main.js"></script>
                         <script src="js/leaflet.js"></script>
+
 </body>
 
 </html>

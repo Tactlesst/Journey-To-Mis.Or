@@ -7,6 +7,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 14px;
+    transition: background-color 0.4s ease;
     color: #888;
 }
 
@@ -435,7 +436,6 @@ body {
 
 .slider .single-slider h1 span {
     color: #fefeff;
-    margin: 100px;
 }
 
 .slider .single-slider p {
@@ -873,8 +873,6 @@ body {
 .why-choose .choose-left p {
     margin-bottom: 35px;
 }
-
-.why-choose .choose-left .list {}
 
 .why-choose .choose-left .list li {
     color: #868686;
@@ -1546,8 +1544,6 @@ body {
     margin-top: 3px;
 }
 
-.departments .department-tab .tab-pane .department-left {}
-
 .departments .department-tab .tab-pane .department-left h3 {
     color: #2c2d3f;
     font-weight: 600;
@@ -1576,8 +1572,6 @@ body {
 .departments .department-tab .tab-pane .department-left p {
     margin-bottom: 20px;
 }
-
-.departments .department-tab .tab-pane .department-left .list {}
 
 .departments .department-tab .tab-pane .department-left .list li {
     position: relative;
@@ -4392,32 +4386,151 @@ body {
     right: 0;
 }
 
-.header .widget-main {
-    float: left;
-}
+    .header .widget-main {
+        float: left;
+    }
 /*=============================
     Leaflet Area
 ===============================*/
 .Leaflef-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     padding: 40px 0;
+    margin-top: 60px;
+}
+
+.dropdown-container {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 900;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px; /* Set a fixed minimum width */
+    max-width: 250px; /* Prevents container from expanding too much */
+}
+
+.dropdown.menu {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
 }
+
+.menu > li {
+    display: inline-flex;
+    
+}
+
+.menu label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%; /* Makes the select box take up the full width of the container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+}
+
+#map-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
 .Button-Placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
-    width: 200px;
+    margin-top: 20px;
+}
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    margin: 30px;
   }
-  .float-child {
+  .switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: sticky;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  .off, .on {
+    position: absolute;
     width: 50%;
-    float: left;
-    padding: 20px;
-    border: 2px solid rgb(0, 0, 0);
-    margin: 50px;
-} 
-  .Button-Placeholder button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    transition: opacity 0.4s;
+    top: 0;
+}
+  .off {
+    position: absolute;
+    content: "";
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    transition: .4s;
+    image-rendering: pixelated;
+    opacity: 1;
+  }
+  .on {
+    position: absolute;
+    content: "";
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    transition: .4s;
+    image-rendering: pixelated;
+    opacity: 0;
+  }
+  .switch input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  .switch input:focus + .slider {
+    box-shadow: 0 0 1px #ccc;
+  }
+  
+  .switch input:checked ~ .off {
+    transform: translateX(2em);
+  }
+  
+  .switch input:checked ~ .on {
+    transform: translateX(2em);
+    opacity: 1;
+  }  
+.Button-Placeholder button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -4427,60 +4540,32 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 200px;
-  }
-  .Button-Placeholder button:hover {
-    background-color: #0056b3;
-  }
-/* Map container styling */
-#map-container {
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
 }
 
-/* Map element styling */
-#map {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-/* Categories/Images Section */
-.Img-Placeholder {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .Img-Placeholder img {
-    width: 100%;
-    height: auto;
-    display: none; /* Hidden by default, shown when a button is clicked */
-  }
-  
-  .Img-Placeholder img.active {
-    display: block;
-  }
-  
-/* Custom CSS to make zoom control icons smaller */
-.leaflet-control-zoom a .leaflet-control-zoom-in,
-.leaflet-control-zoom a .leaflet-control-zoom-out {
-    font-size: 14px;
-    line-height: 25px;
-}
+    .Button-Placeholder button:hover {
+        background-color: #0056b3;
+    }
 
+    #map-container {
+        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+    }
 
-/* Style for smaller images in the popup */
-.popup-image-container {
-    width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    margin-top: 20px;
-}
+    #map {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .leaflet-control-zoom a .leaflet-control-zoom-in,
+    .leaflet-control-zoom a .leaflet-control-zoom-out {
+        font-size: 14px;
+        line-height: 25px;
+    }
 
-#redirect-button:hover {
-    background-color: #45a049;
-}
+    #redirect-button:hover {
+        background-color: #45a049;
+    }
 
 /*=============================
     Leaflet END

@@ -148,7 +148,7 @@
     .slider .single-slider {
         height: 380px;
     }
-    .schedule {
+    .Places-top {
         background: #fff;
         margin: 0;
         padding: 0;
@@ -156,10 +156,10 @@
         padding: 70px 0;
         border-bottom: 1px solid #eee;
     }
-    .schedule .schedule-inner {
+    .Places-top .Places-top-inner {
         transform: none;
     }
-    .schedule .single-schedule.last {
+    .Places-top .single-Places-top.last {
         margin-top: 30px;
     }
     .slider .single-slider {
@@ -604,7 +604,7 @@
     .slider .single-slider {
         height: 380px;
     }
-    .schedule {
+    .Places-top {
         background: #fff;
         margin: 0;
         padding: 50px 0;
@@ -615,7 +615,7 @@
         align-items: center;
         text-align: center;
     }
-    .schedule .schedule-inner {
+    .Places-top .Places-top-inner {
         transform: none;
         max-width: 1200px;
         width: 100%;
@@ -624,7 +624,7 @@
         justify-content: center;
     }
 
-    .schedule .single-schedule {
+    .Places-top .single-Places-top {
         margin: 15px;
         box-sizing: border-box;
     }
@@ -1131,7 +1131,7 @@
     .slider .single-slider {
         height: 380px;
     }
-    .schedule {
+    .Places-top {
         text-align: center;
         background: #fff;
         margin: 0;
@@ -1140,10 +1140,10 @@
         padding: 50px 0;
         border-bottom: 1px solid #eee;
     }
-    .schedule .schedule-inner {
+    .Places-top .Places-top-inner {
         transform: none;
     }
-    .schedule .single-schedule {
+    .Places-top .single-Places-top {
         margin: 15px 0;
     }
     .slider .single-slider {

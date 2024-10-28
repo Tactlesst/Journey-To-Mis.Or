@@ -276,13 +276,6 @@ $(".hero-slider").owlCarousel({
     $(window).on("load", function() {
         $(".preloader").addClass("preloader-deactivate");
     });
-    document.getElementById('toggle-switch').addEventListener('change', function() {
-        if (this.checked) {
-            document.body.style.backgroundColor = 'white'; // Light mode
-        } else {
-            document.body.style.backgroundColor = '#121212'; // Dark mode
-        }
-    });
-    
+
 
 })(jQuery);

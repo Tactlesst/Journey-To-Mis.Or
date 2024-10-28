@@ -5,17 +5,12 @@ document.getElementById('toggle-switch').addEventListener('change', function() {
         document.body.style.backgroundColor = '#121212'; // Dark mode
     }
 });
-const mapOverlay = document.getElementById('map-overlay');
-const mapContainer = document.getElementById('map-container');
-
-// Remove overlay when clicked, enabling map interaction
-mapOverlay.addEventListener('click', function () {
-    mapOverlay.style.display = 'none';
-});
-
-// Re-enable overlay when clicking outside the map
-document.addEventListener('click', function (event) {
+map.on('click', function() {
+    map.scrollWheelZoom.enable();
+  });
+  document.addEventListener('click', function(event) {
+    const mapContainer = document.getElementById('map-container');
     if (!mapContainer.contains(event.target)) {
-        mapOverlay.style.display = 'block';
+      map.scrollWheelZoom.disable();
     }
-});
+  });

@@ -1,6 +1,6 @@
 
         // Initialize the map centered on Balingasag, Misamis Oriental
-        var map = L.map('map').setView([8.743003054482337, 124.77559089660646], 13); // Coordinates for Balingasag
+        const map = L.map('map',{ scrollWheelZoom: false }).setView([8.743003054482337, 124.77559089660646], 13); // Coordinates for Balingasag
 
         // Add OpenStreetMap layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -195,6 +195,7 @@
                 jasaanMarker.openPopup();
             });
             
-            
         });
+        
                 /*-----BUTTONS FUNCTION START------*/
+                

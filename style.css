@@ -385,8 +385,6 @@ body {
     border-color: #e6e6e6;
 }
 
-/* Header Sticky */
-
 .header.sticky .header-inner {
     position: fixed;
     z-index: 999;
@@ -409,23 +407,27 @@ body {
 =============================*/
 
 .slider .single-slider {
-    height: 650px;
+    height: 580px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 10%;
-    
+    width: 100%;
 }
 
+.slider .single-slider .container .row{
+    padding-top: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
 .slider .single-slider .text {
-    margin-top: 50px;
-    background-color:rgba(40, 40, 43, 0.5);
+    background-color: rgba(40, 40, 43, 0.5);
     border-radius: 20px;
     padding: 20px;
-}
-
-.slider.index .single-slider .text {
-    margin-top: 150px;
 }
 
 .slider .single-slider h1 {
@@ -435,7 +437,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 130%;
-    
+    text-align: center;
 }
 
 .slider .single-slider h1 span {
@@ -446,10 +448,12 @@ body {
     color: #fcf6f6;
     margin-top: 27px;
     font-weight: 400;
+    text-align: center;
 }
 
 .slider .single-slider .button {
     margin-top: 30px;
+    text-align: center;
 }
 
 .slider .single-slider .btn {
@@ -513,7 +517,6 @@ body {
     right: 20px;
 }
 
-/* Slider Animation */
 .owl-item.active .single-slider .text{
     animation: fadeInUp 1s both 0.6s;
 }
@@ -534,27 +537,250 @@ body {
 =============================*/
 
 /*=============================
-	Start Schedule CSS
+    Leaflet Area
 ===============================*/
-
-.schedule {
-    background: #f5f3f3;
-    padding: 0;
-    margin-top: 600px;
-    height: 230px;
-    width: 80%;
-    margin: 10px auto;
-
+.Leaflef-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 40px 0;
+    margin-top: 60px;
 }
 
-.schedule .schedule-inner {
+.dropdown-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 900;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px; /* Set a fixed minimum width */
+    max-width: 250px; /* Prevents container from expanding too much */
+}
+
+.dropdown.menu2 {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu2 > li {
+    display: inline-flex;
+    
+}
+
+.menu2 label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Button-Placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 1210px;
+    margin-top: 20px;
+}
+
+.Button-Placeholder button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+    .Button-Placeholder button:hover {
+        background-color: #0056b3;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .leaflet-control-zoom a .leaflet-control-zoom-in,
+    .leaflet-control-zoom a .leaflet-control-zoom-out {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    #redirect-button:hover {
+        background-color: #45a049;
+    }
+    #map-container {
+        margin: 0 auto;
+        width: 1000px;
+        height: 400px;
+        cursor: pointer;
+    }
+
+.Map-Contents {
+    background-color: gray;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.Map-Pictures {
+    width: 800px;
+    float: left;
+    display: flex;
+    justify-content: left;
+    gap: 10px; 
+}
+
+.Map-columns {
+    width: calc(25% - 10px);
+    box-sizing: border-box;
+}
+
+.Map-columns img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Text in Map Columns */
+.Map-columns p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*=============================
+    Leaflet END
+===============================*/
+
+/*=============================
+    Secret START
+===============================*/
+.switch {
+    top: -80px;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    margin: 30px;
+  }
+  .switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: sticky;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  .off, .on {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    transition: opacity 0.4s;
+    top: 0;
+  }
+  .off {
+    position: absolute;
+    content: "";
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    transition: .4s;
+    image-rendering: pixelated;
+    opacity: 1;
+  }
+  .on {
+    position: absolute;
+    content: "";
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    transition: .4s;
+    image-rendering: pixelated;
+    opacity: 0;
+  }
+  .switch input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  .switch input:focus + .slider {
+    box-shadow: 0 0 1px #ccc;
+  }
+  
+  .switch input:checked ~ .off {
+    transform: translateX(2em);
+  }
+  
+  .switch input:checked ~ .on {
+    transform: translateX(2em);
+    opacity: 1;
+  }  
+/*=============================
+    Secret END
+===============================*/
+
+/*=============================
+	Start Places-top CSS
+===============================*/
+
+.Places-top {
+    background: #f8f8f8;
+    padding: 0;
+    margin-top: 500px;
+    height: 230px;
+    width: 80%;
+    margin: 80px auto;
+}
+.Places-top img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.Places-top .Places-top-inner {
     position: relative;
     transform: translateY(-50%);
     z-index: 9;
     
 }
 
-.schedule .single-schedule {
+.Places-top .single-Places-top {
     position: relative;
     text-align: left;
     z-index: 3;
@@ -569,14 +795,14 @@ body {
     
 }
 
-.schedule .single-schedule .inner {
+.Places-top .single-Places-top .inner {
     overflow: hidden;
     position: relative;
     padding: 30px;
     z-index: 2;
 }
 
-.schedule .single-schedule:before {
+.Places-top .single-Places-top:before {
     position: absolute;
     z-index: -1;
     content: "";
@@ -596,15 +822,15 @@ body {
     transition: all 0.3s ease-out 0s;
 }
 
-.schedule .single-schedule:hover:before {
+.Places-top .single-Places-top:hover:before {
     opacity: 0.8;
 }
 
-.schedule .single-schedule:hover {
+.Places-top .single-Places-top:hover {
     transform: translateY(-5px);
 }
 
-.schedule .single-schedule .icon i {
+.Places-top .single-Places-top .icon i {
     position: absolute;
     font-size: 110px;
     color: #fff;
@@ -620,12 +846,12 @@ body {
     bottom: -30px;
 }
 
-.schedule .single-schedule span {
+.Places-top .single-Places-top span {
     display: block;
     color: #fff;
 }
 
-.schedule .single-schedule h4 {
+.Places-top .single-Places-top h4 {
     font-size: 20px;
     font-weight: 600;
     display: inline-block;
@@ -634,12 +860,12 @@ body {
     margin-top: 13px;
 }
 
-.schedule .single-schedule p {
+.Places-top .single-Places-top p {
     color: #fff;
     margin-top: 22px;
 }
 
-.schedule .single-schedule a {
+.Places-top .single-Places-top a {
     color: #fff;
     margin-top: 25px;
     font-weight: 500;
@@ -647,7 +873,7 @@ body {
     position: relative;
 }
 
-.schedule .single-schedule a:before {
+.Places-top .single-Places-top a:before {
     position: absolute;
     content: "";
     left: 0;
@@ -660,43 +886,43 @@ body {
     transition: all 0.4s ease;
 }
 
-.schedule .single-schedule a:hover:before {
+.Places-top .single-Places-top a:hover:before {
     width: 100%;
     width: 100%;
 }
 
-.schedule .single-schedule a i {
+.Places-top .single-Places-top a i {
     margin-left: 10px;
 }
 
 
-.schedule .single-schedule .time-sidual {
+.Places-top .single-Places-top .time-sidual {
     overflow: hidden;
     margin-top: 17px;
 }
 
-.schedule .single-schedule .time-sidual li {
+.Places-top .single-Places-top .time-sidual li {
     display: block;
     color: #fff;
     width: 100%;
     margin-bottom: 3px;
 }
 
-.schedule .single-schedule .time-sidual li:last-child {
+.Places-top .single-Places-top .time-sidual li:last-child {
     margin: 0;
 }
 
-.schedule .single-schedule .time-sidual li span {
+.Places-top .single-Places-top .time-sidual li span {
     display: inline-block;
 }
 
-.schedule .single-schedule .day-head .time {
+.Places-top .single-Places-top .day-head .time {
     font-weight: 400;
     float: right;
 }
 
 /*=============================
-	End Schedule CSS
+	End Places-top CSS
 ===============================*/
 
 /*=============================
@@ -791,7 +1017,7 @@ body {
 }
 
 .fun-facts {
-    background: url("img/fun-bg.jpg");
+    background: url("images/img/fun-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -912,7 +1138,7 @@ body {
 .why-choose .choose-right {
     height: 100%;
     width: 100%;
-    background-image: url("img/slider1.jpg");
+    background-image: url("images/img/slider1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -979,7 +1205,7 @@ body {
 =================================*/
 
 .call-action {
-    background-image: url("img/blockqoute-bg.jpg");
+    background-image: url("images/img/blockqoute-bg.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1340,7 +1566,7 @@ body {
 }
 
 .service-details-inner-left {
-    background-image: url("img/signup-bg.jpg");
+    background-image: url("images/img/signup-bg.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1383,7 +1609,7 @@ body {
 ===============================*/
 
 .testimonials {
-    background-image: url("img/testi-bg.jpg");
+    background-image: url("images/img/testi-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1744,7 +1970,7 @@ body {
 ==========================*/
 
 .clients {
-    background-image: url("img/client-bg.jpg");
+    background-image: url("images/img/client-bg.jpg");
     background-size: cover;
     background-position: center;
     padding: 100px 0px;
@@ -1769,7 +1995,7 @@ body {
 ======================*/
 
 .team {
-    background-image: url("img/testi-bg.jpg");
+    background-image: url("images/img/testi-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2354,7 +2580,7 @@ body {
 /* Blockqoute */
 
 .news-single blockquote {
-    background-image: url("img/blockqoute-bg.jpg");
+    background-image: url("images/img/blockqoute-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2931,7 +3157,7 @@ body {
 }
 
 .login .login-left {
-    background-image: url(img/signup-bg.jpg);
+    background-image: url(images/img/signup-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3110,7 +3336,7 @@ body {
 }
 
 .register .register-left {
-    background-image: url(img/signup-bg.jpg);
+    background-image: url(images/img/signup-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3807,7 +4033,7 @@ body {
 .about-image {
     width: 100%;
     height: 100%;
-    background-image: url(img/about-img.jpg);
+    background-image: url(images/img/about-img.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4004,7 +4230,7 @@ body {
 .our-mission-image {
     width: 100%;
     height: 100%;
-    background-image: url(img/mission-img.jpg);
+    background-image: url(images/img/mission-img.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4396,180 +4622,3 @@ body {
     .header .widget-main {
         float: left;
     }
-/*=============================
-    Leaflet Area
-===============================*/
-.Leaflef-map {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: 40px 0;
-    margin-top: 60px;
-}
-
-.dropdown-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 900;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 200px; /* Set a fixed minimum width */
-    max-width: 250px; /* Prevents container from expanding too much */
-}
-
-.dropdown.menu2 {
-    text-align: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.menu2 > li {
-    display: inline-flex;
-    
-}
-
-.menu2 label {
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-select {
-    width: 100%; /* Makes the select box take up the full width of the container */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
-}
-
-.Button-Placeholder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.Button-Placeholder button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 200px;
-}
-
-    .Button-Placeholder button:hover {
-        background-color: #0056b3;
-    }
-
-    #map-container {
-        margin: 0 auto;
-        width: 1650px;
-        height: 400px;
-    }
-
-    #map {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
-    .leaflet-control-zoom a .leaflet-control-zoom-in,
-    .leaflet-control-zoom a .leaflet-control-zoom-out {
-        font-size: 14px;
-        line-height: 25px;
-    }
-
-    #redirect-button:hover {
-        background-color: #45a049;
-    }
-
-/*=============================
-    Leaflet END
-===============================*/
-
-/*=============================
-    Secret START
-===============================*/
-.switch {
-    top: -80px;
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 4em;
-    height: 2em;
-    margin: 30px;
-  }
-  .switch input {
-    opacity: 1;
-    width: 0;
-    height: 0;
-  }
-  .slider {
-    position: sticky;
-    cursor: pointer;
-    background-color: #ccc;
-    transition: .4s;
-  }
-  .off, .on {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
-    transition: opacity 0.4s;
-    top: 0;
-  }
-  .off {
-    position: absolute;
-    content: "";
-    height: 2em;
-    width: 2em;
-    background-color: white;
-    transition: .4s;
-    image-rendering: pixelated;
-    opacity: 1;
-  }
-  .on {
-    position: absolute;
-    content: "";
-    height: 2em;
-    width: 2em;
-    background-color: white;
-    transition: .4s;
-    image-rendering: pixelated;
-    opacity: 0;
-  }
-  .switch input:checked + .slider {
-    background-color: #ccc;
-  }
-  
-  .switch input:focus + .slider {
-    box-shadow: 0 0 1px #ccc;
-  }
-  
-  .switch input:checked ~ .off {
-    transform: translateX(2em);
-  }
-  
-  .switch input:checked ~ .on {
-    transform: translateX(2em);
-    opacity: 1;
-  }  
-/*=============================
-    Secret END
-===============================*/

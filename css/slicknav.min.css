@@ -118,10 +118,10 @@
  }
  
  .slicknav_btn {
-    position: absolute; /* Change from relative to absolute */
-    left: 10px; /* You can adjust this to 0px if needed */
-    top: 10%; /* Center vertically */
-    transform: translateY(-50%); /* Centering trick */
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    transform: translateY(-50%); 
     display: block;
     padding: .438em .625em;
     line-height: 1.125em;

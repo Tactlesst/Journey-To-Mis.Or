@@ -1,78 +1,50 @@
-// Sample data for subjects, topics, and chapters
-const data = {
-    Balingasag: {
-        Algebra: ['Linear Equations', 'Quadratic Equations', 'Polynomials'],
-        Geometry: ['Triangles', 'Circles', 'Polygons'],
-    },
-    Gingoog: {
-        Physics: ['Newton\'s Laws', 'Thermodynamics', 'Optics'],
-        Chemistry: ['Periodic Table', 'Chemical Reactions', 'Stoichiometry'],
-    },
-    Opol: {
-        Ancient: ['Egypt', 'Greece', 'Rome'],
-        Modern: ['World War I', 'World War II', 'Cold War'],
-    }
-};
+document.addEventListener('DOMContentLoaded', function () {
+    const locationDropdown = document.getElementById('location-dropdown');
+    
+    locationDropdown.addEventListener('change', function () {
+        // Hide all buttons
+        const buttons = [
+            'balingasag-button',
+            'gingoog-button',
+            'balingoan-button',
+            'medina-button',
+            'opol-button',
+            'initao-button',
+            'lugait-button',
+            'laguindingan-button',
+            'jasaan-button'
+        ];
 
-// Get DOM elements
-const subjectSelect = document.getElementById('subject');
-const topicSelect = document.getElementById('topic');
-const chapterSelect = document.getElementById('chapter');
+        buttons.forEach(buttonId => {
+            document.getElementById(buttonId).style.display = 'none';
+        });
 
-// Populate subjects dropdown
-for (const subject in data) {
-    const option = document.createElement('option');
-    option.value = subject;
-    option.textContent = subject;
-    subjectSelect.appendChild(option);
-}
-
-// Event listener for subject change
-subjectSelect.addEventListener('change', function () {
-    const selectedSubject = this.value;
-    // Clear and disable topics and chapters
-    topicSelect.innerHTML = '<option value="" selected="selected">Select topic</option>';
-    chapterSelect.innerHTML = '<option value="" selected="selected">Select chapter</option>';
-    topicSelect.disabled = true;
-    chapterSelect.disabled = true;
-
-    if (selectedSubject) {
-        // Populate topics dropdown based on selected subject
-        for (const topic in data[selectedSubject]) {
-            const option = document.createElement('option');
-            option.value = topic;
-            option.textContent = topic;
-            topicSelect.appendChild(option);
+        // Show the corresponding button based on the selection
+        const selectedValue = this.value;
+        if (selectedValue) {
+            const buttonId = selectedValue + '-button';
+            document.getElementById(buttonId).style.display = 'block';
         }
-        topicSelect.disabled = false; // Enable topics dropdown
-    }
+    });
+    
+    // Add event listeners for buttons (as you've already done)
+    // Example for Balingasag
+    document.getElementById('balingasag-button').addEventListener('click', function() {
+        console.log('Balingasag button clicked');
+        map.setView(balingasagLocation, 13);
+        balingasagMarker.openPopup();
+    });
+
+    // Repeat for other buttons...
 });
 
-// Event listener for topic change
-topicSelect.addEventListener('change', function () {
-    const selectedSubject = subjectSelect.value;
-    const selectedTopic = this.value;
-
-    // Clear and disable chapters dropdown
-    chapterSelect.innerHTML = '<option value="" selected="selected">Select chapter</option>';
-    chapterSelect.disabled = true;
-
-    if (selectedSubject && selectedTopic) {
-        // Populate chapters dropdown based on selected topic
-        const chapters = data[selectedSubject][selectedTopic];
-        for (const chapter of chapters) {
-            const option = document.createElement('option');
-            option.value = chapter;
-            option.textContent = chapter;
-            chapterSelect.appendChild(option);
-        }
-        chapterSelect.disabled = false; // Enable chapters dropdown
-    }
-});
+// Dark mode toggle
 document.getElementById('toggle-switch').addEventListener('change', function() {
-    if (this.checked) {
-        document.body.style.backgroundColor = 'black';
-    } else {
-        document.body.style.backgroundColor = 'white';
-    }
+    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
+});
+
+
+// Dark mode toggle
+document.getElementById('toggle-switch').addEventListener('change', function() {
+    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
 });

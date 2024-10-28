@@ -3,11 +3,10 @@
         var map = L.map('map').setView([8.743003054482337, 124.77559089660646], 13); // Coordinates for Balingasag
 
         // Add OpenStreetMap layer
-        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        });
-        
-        osm.addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
         
         
         /*-----VARIABLE DATA START------*/

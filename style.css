@@ -621,7 +621,6 @@ select {
         border-radius: 10px;
         cursor: pointer;
     }
-    
     .leaflet-control-zoom a .leaflet-control-zoom-in,
     .leaflet-control-zoom a .leaflet-control-zoom-out {
         font-size: 14px;
@@ -632,10 +631,8 @@ select {
         background-color: #45a049;
     }
     #map-container {
-        margin: 0 auto;
         width: 1000px;
         height: 400px;
-        cursor: pointer;
     }
 
 .Map-Contents {
@@ -644,13 +641,15 @@ select {
     margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
+    width: 1000px;
+    overflow: auto;
+    white-space: nowrap;
+    height: 250px;
 }
 
 .Map-Pictures {
-    width: 800px;
-    float: left;
     display: flex;
-    justify-content: left;
+    width: 800px;
     gap: 10px; 
 }
 
@@ -666,7 +665,6 @@ select {
     display: block;
 }
 
-/* Text in Map Columns */
 .Map-columns p {
     color: white;
     font-size: 30px;

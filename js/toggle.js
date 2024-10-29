@@ -1,10 +1,3 @@
-document.getElementById('toggle-switch').addEventListener('change', function() {
-    if (this.checked) {
-        document.body.style.backgroundColor = 'white'; // Light mode
-    } else {
-        document.body.style.backgroundColor = '#121212'; // Dark mode
-    }
-});
 map.on('click', function() {
     map.scrollWheelZoom.enable();
   });
@@ -14,13 +7,3 @@ map.on('click', function() {
       map.scrollWheelZoom.disable();
     }
   });
-  // Dark mode toggle
-document.getElementById('toggle-switch').addEventListener('change', function() {
-    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
-});
-
-
-// Dark mode toggle
-document.getElementById('toggle-switch').addEventListener('change', function() {
-    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
-});

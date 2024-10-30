@@ -432,50 +432,51 @@
         src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAQABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIEBf/EACMQAAEDAwQDAQEAAAAAAAAAAAQBAgUDESEAEjFBBlFhMkL/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGBEAAwEBAAAAAAAAAAAAAAAAABIiMUH/2gAMAwEAAhEDEQA/AM+Bg4mS8coRccMOdNG01qVyH/kRvHPKKmMdr8uujPwUTG+NkRpw1AKWCbvHKa2zTGphc9u9p0q+rLqeMl4kSCGkYgtoE0HTahIz3bWGNanPrdyqWzn7p5ibh5CArnyZNMyVLpK0QSkt2BNXtVX+7ol1wuLJiyaHt+6Kyp//2Q=="
         class="on">
     </label>
+    
     <div class="dropdown-container">
       <ul class="menu2">
         <li>
           <label>Location:</label>
           <select id="subjects">
             <option value="">Select a location</option>
-            <option value="Balingasag" data-coords="8.743003054482337,124.77559089660646"
+            <option value="balingasag" id="defaultOpen" data-coords="8.743003054482337,124.77559089660646"
               data-description="Balingasag is a municipality in Misamis Oriental, Philippines."
-              data-image="path/BALINGASAG.png">
+              data-image="images/BALINGASAG.png">
               Balingasag
             </option>
             <option value="Medina" data-coords="8.911358946831657,125.02432823181154"
-              data-description="Medina is another location in Misamis Oriental." data-image="path/to/Medina-image.jpg">
+              data-description="Medina is another location in Misamis Oriental." data-image="images/MEDINA.png">
               Medina
             </option>
             <option value="Opol" data-coords="8.521225682813045,124.5747470855713"
-              data-description="Opol is another location in Misamis Oriental." data-image="path/to/Opol-image.jpg">
+              data-description="Opol is another location in Misamis Oriental." data-image="images/OPOL.jpg">
               Opol
             </option>
             <option value="Gingoog" data-coords="8.82384043206159,125.10166168212892"
               data-description="Gingoog is another location in Misamis Oriental."
-              data-image="path/to/gingoog-image.jpg">
+              data-image="images/GINGOOG.png">
               Gingoog
             </option>
             <option value="Balingoan" data-coords="9.004070083300151,124.85047817230226"
               data-description="Balingoan is another location in Misamis Oriental."
-              data-image="path/to/balingoan-image.jpg">
+              data-image="images/BALINGOAN.jpg">
               Balingoan
             </option>
             <option value="Initao" data-coords="8.49750009121942,124.30532455444337"
-              data-description="Initao is another location in Misamis Oriental." data-image="path/to/Initao-image.jpg">
+              data-description="Initao is another location in Misamis Oriental." data-image="images/INITAO.jpg">
               Initao
             </option>
             <option value="Laguindingan" data-coords="8.57461348506942,124.44072246551515"
               data-description="Laguindingan is another location in Misamis Oriental."
-              data-image="path/to/Laguindingan-image.jpg">
+              data-image="images/LAGUINDINGAN.png">
               Laguindingan
             </option>
             <option value="Lugait" data-coords="8.342929683969652,124.26013469696046"
-              data-description="Lugait is another location in Misamis Oriental." data-image="path/to/Lugait-image.jpg">
+              data-description="Lugait is another location in Misamis Oriental." data-image="images/LUGAIT.png">
               Lugait
             </option>
             <option value="Jasaan" data-coords="8.64958987649745,124.75421905517586"
-              data-description="Jasaan is another location in Misamis Oriental." data-image="path/to/Jasaan-image.jpg">
+              data-description="Jasaan is another location in Misamis Oriental." data-image="images/JASAAN.png">
               Jasaan
             </option>
           </select>
@@ -483,54 +484,480 @@
       </ul>
     </div>
     <!-- Map Placement leaflet -->
-    <div class="float-child" id="map-overlay">
-      <div id="map-container">
+    <div class="tab-map-container">
+      <div class="map-container" id="map-container">
         <div id="map"></div>
       </div>
-    </div>
-    <div class="Map-Contents">
-      <div class="Map-Pictures">
-        <div class="Map-columns">
-          <img id="balingasag-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="gingoog-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="balingoan-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="initao-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="jasaan-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="laguindingan-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="lugait-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="medina-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
-        </div>
-        <div class="Map-columns">
-          <img id="opol-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-          <p>BALINGASAG</p>
+      <div id="balingasag" class="tabcontent">
+        <h1>BALINGASAG</h1>
+        <p>BALINGASAG is the.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="balingasag-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+              <p>BALINGASG IS THE BEAUTIFUL WORLD</p>
+            </div>
+            <div class="Map-columns">
+              <img id="gingoog-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="balingoan-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="initao-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="jasaan-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="laguindingan-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="lugait-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="medina-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+            <div class="Map-columns">
+              <img id="opol-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <span>BALINGASAG</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    </div>
-    </div>
+      <div id="Medina" class="tabcontent">
+        <h1>Medina</h1>
+        <p>Medina is the capital of Medina.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="balingasag-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="gingoog-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="balingoan-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="initao-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="jasaan-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="laguindingan-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="lugait-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="medina-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="opol-image" src="images/MEDINA.png" alt="MEDINA Image">
+              <span>MEDINA</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Opol" class="tabcontent">
+        <h1>Opol</h1>
+        <p>Opol is the capital of Opol.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="balingasag-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="gingoog-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="balingoan-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="initao-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="jasaan-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="laguindingan-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="lugait-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="medina-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="opol-image" src="images/OPOL.jpg" alt="Opol Image">
+              <span>Opol</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Gingoog" class="tabcontent">
+        <h1>Gingoog</h1>
+        <p>Gingoog is the capital of Gingoog.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="balingasag-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="gingoog-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="balingoan-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="initao-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="jasaan-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="laguindingan-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="lugait-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="medina-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="opol-image" src="images/GINGOOG.png" alt="Gingoog Image">
+              <span>Gingoog</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Balingoan" class="tabcontent">
+        <h1>Balingoan</h1>
+        <p>Balingoan is the capital of Balingoan.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+              <span>Balingoan</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Initao" class="tabcontent">
+        <h1>Initao</h1>
+        <p>Initao is the capital of Initao.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+              <span>Initao</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Laguindingan" class="tabcontent">
+        <h1>Laguindingan</h1>
+        <p>Laguindingan is the capital of Laguindingan.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Laguindingan-image" src="images/Laguindingan.png" alt="Laguindingan Image">
+              <span>Laguindingan</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Lugait" class="tabcontent">
+        <h1>Lugait</h1>
+        <p>Lugait is the capital of Lugait.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Lugait-image" src="images/Lugait.png" alt="Lugait Image">
+              <span>Lugait</span>
+              <p>DETAILS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Jasaan" class="tabcontent">
+        <h1>Jasaan</h1>
+        <p>Jasaan is the capital of Jasaan.</p>
+        <div class="Map-Contents">
+          <div class="Map-Pictures">
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+            <div class="Map-columns">
+              <img id="Jasaan-image" src="images/Jasaan.png" alt="Jasaan Image">
+              <span>Jasaan</span>
+              <p>DETAILS</p>
+            </div>
+        </div>
     <!-- Image of the places in Balingasag -->
   </section>
   <!-- Endleaflet-->
@@ -746,6 +1173,8 @@
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </section>
   <!--/ End portfolio -->

@@ -30,6 +30,9 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* Header Sticky */
+    .Leaflef-map {
+        height: 300px; /* Adjust height for tablets */
+    }
     .section {
         padding: 70px 0px;
     }
@@ -394,6 +397,17 @@
 @media only screen and (max-width: 767px) {
     .header .logo {
         margin-top: 10px;
+    }
+    .tab-map-container {
+        flex-direction: column;  /* Stack items vertically */
+    }
+    
+    #map {
+        height: 300px;           /* Adjust height for tablets */
+    }
+    
+    .tabcontent {
+        padding: 15px;           /* Less padding on smaller screens */
     }
     .header.style2 .logo {
         margin-top: 10px;

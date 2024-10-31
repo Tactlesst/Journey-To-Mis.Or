@@ -411,7 +411,7 @@ body {
 =============================*/
 
 .slider .single-slider {
-    height: 580px;
+    height: 680px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -420,33 +420,38 @@ body {
 
 .slider .single-slider .container .row {
     padding-top: 70px;
-    padding-left: 100px;
-    padding-right: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
+    max-height:40px;
 }
 
 .slider .single-slider .text {
     background-color: rgba(40, 40, 43, 0.5);
     border-radius: 20px;
     padding: 20px;
+    width: 700px;
+    height: 300px;
+    justify-content: center;
 }
 
 .slider .single-slider h1 {
-    color: #caec05;
+    color: #eef0e7;
     font-size: 44px;
     font-weight: 700;
     margin: 0;
     padding: 0;
     line-height: 130%;
     text-align: center;
+    text-wrap: pretty;
 }
 
 .slider .single-slider h1 span {
-    color: #fefeff;
+    color: #f1eeee;
+    width: 600px;
+    
 }
 
 .slider .single-slider p {
@@ -454,11 +459,16 @@ body {
     margin-top: 27px;
     font-weight: 400;
     text-align: center;
+    text-wrap: pretty;
+    width: 600px;
+    margin-left: 30px;
 }
 
 .slider .single-slider .button {
     margin-top: 30px;
     text-align: center;
+    justify-content: center;
+    margin-right: 10px;
 }
 
 .slider .single-slider .btn {
@@ -554,16 +564,16 @@ body {
     margin-top: 60px;
 }
 
-.dropdown-container {
+.dropdownss-container {
     margin: 20px; /* Spacing around the dropdown */
 }
 
-.menu2 {
+.menu23 {
     list-style-type: none; /* Remove default list styling */
     padding: 0; /* Remove default padding */
 }
 
-.menu2 li {
+.menu23 li {
     margin-bottom: 10px; /* Spacing between dropdown elements */
 }
 
@@ -710,23 +720,6 @@ option {
     #Opol, #Gingoog{
     background-color: #4899eb;
   }
-  .scrollable {
-    overflow-y: auto; /* Allow vertical scrolling */
-    scrollbar-width: thin; /* For Firefox */
-}
-
-.scrollable::-webkit-scrollbar {
-    width: 8px; /* For Chrome, Safari, and Edge */
-}
-
-.scrollable::-webkit-scrollbar-thumb {
-    background-color: #888; /* Customize scrollbar color */
-    border-radius: 4px; /* Round edges */
-}
-
-.scrollable::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Darker color on hover */
-}
   .popup-content {
     background-color: white;
     border: 1px solid #b0bec5;
@@ -1201,6 +1194,7 @@ option {
 
 .why-choose .choose-left p {
     margin-bottom: 35px;
+    color: black;
 }
 
 .why-choose .choose-left .list li {

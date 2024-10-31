@@ -25,3 +25,13 @@ selectElement.addEventListener('change', function() {
         imagePreview.style.display = 'none'; // Hide the image if no location is selected
     }
 });
+  // Dark mode toggle
+  document.getElementById('toggle-switch').addEventListener('change', function() {
+    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
+});
+
+
+// Dark mode toggle
+document.getElementById('toggle-switch').addEventListener('change', function() {
+    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
+});

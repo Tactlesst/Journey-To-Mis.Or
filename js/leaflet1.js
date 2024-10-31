@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
  function setMapView(locationElement) {
     const coords = locationElement.dataset.coords.split(',').map(Number);
     const description = locationElement.dataset.description;
-    const image = locationElement.dataset.image;
+
     const locationName = locationElement.value;
 
     // Log the coordinates for debugging
@@ -101,10 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     addAllMarkers();
 
-    document.getElementById('toggle-switch').addEventListener('change', function () {
-        document.body.style.backgroundColor = this.checked ? 'black' : 'white';
-        document.body.style.color = this.checked ? 'white' : 'black';
-    });
+
 
     initializeDropdown();
 });

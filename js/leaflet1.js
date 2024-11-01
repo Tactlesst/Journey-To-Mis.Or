@@ -16,6 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
         myFunction();
     }
     
+    function openCity(cityName) {
+        const tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none"; 
+        }
+    
+        const activeTab = document.getElementById(cityName);
+        activeTab.style.display = "block";
+    
+        // Ensure map is resized correctly when tab becomes visible
+        map.invalidateSize();
+    }
+    
 
     function myFunction() {
         const input = document.getElementById("mySearch").value.toUpperCase();

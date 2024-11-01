@@ -8,14 +8,33 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 14px;
-    transition: background-color 0.4s ease;
     color: #888;
 }
 
 .container {
     max-width: 1170px;
 }
+#arrowUp {
+    z-index: 2147483647;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 25px;
+    padding: 10px 20px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #00000026;
+    background: #1a76d1;
+    color: #fff;
+  }
 
+  #arrowUp:hover{
+    background: #2c2d3f;
+  }
 #scrollUp {
     bottom: 15px;
     right: 15px;
@@ -555,6 +574,7 @@ body {
 /*=============================
     Leaflet Area
 ===============================*/
+
 .Leaflef-map {
     display: flex;
     flex-direction: column;
@@ -562,49 +582,7 @@ body {
     position: relative;
     padding: 40px 0;
     margin-top: 60px;
-}
-
-.dropdownss-container {
-    margin: 20px; /* Spacing around the dropdown */
-}
-
-.menu23 {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-}
-
-.menu23 li {
-    margin-bottom: 10px; /* Spacing between dropdown elements */
-}
-
-label {
-    font-size: 16px; /* Label size */
-    color: #555; /* Slightly muted color */
-}
-
-select {
-    width: 100%; /* Full width */
-    padding: 10px; /* Inner padding */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-    background-color: white; /* Background color */
-    font-size: 14px; /* Font size */
-    color: #333; /* Text color */
-    cursor: pointer; /* Pointer on hover */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
-}
-
-select:focus {
-    border-color: #0056b3; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
-}
-
-option {
-    padding: 10px; /* Padding for options (this may not work in all browsers) */
-    background-color: white; /* Background color for options */
-}
-.Button-Placeholder button:hover {
-    background-color: #0056b3;
+    height: 120vh;
 }
 
 #map {
@@ -616,21 +594,81 @@ option {
     padding-left: 700px;
 }
 
-#locationImage {
-    display: none; /* Initially hidden */
-}
-
-
-.map-container{
+.map-container {
     cursor: pointer;
-    
 }
+/*=============================
+    Search Map Styling
+===============================*/
+
+.search-container{
+    width: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    left: 100px;
+}
+
+/*=============================
+    Dropdown and Select Styling
+===============================*/
+
+.select:focus {
+    border-color: #0056b3; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+option {
+    padding: 10px; /* Padding for options (this may not work in all browsers) */
+    background-color: white; /* Background color for options */
+}
+
+/*=============================
+    Button Styling
+===============================*/
+
+.Button-Placeholder button:hover {
+    background-color: #0056b3;
+}
+
+.popup-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #0056b3; /* Dark blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.popup-button:hover {
+    background: #2c2d3f;
+}
+
+/*=============================
+    Leaflet Map Controls
+===============================*/
 
 .leaflet-control-zoom a .leaflet-control-zoom-in,
 .leaflet-control-zoom a .leaflet-control-zoom-out {
     font-size: 14px;
     line-height: 25px;
 }
+
+/*=============================
+    Map Contents and Pictures
+===============================*/
 
 .Map-Contents {
     background-color: rgb(52, 150, 243);
@@ -651,6 +689,9 @@ option {
 
 .Map-columns {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Map-columns img {
@@ -663,23 +704,27 @@ option {
 }
 
 .Map-columns p {
-    color: #121213 !important; /* Force this color */
+    color: #121213 !important;
     text-align: center; 
     text-wrap: wrap;
 }
 
-.tabcontent h1 , p{
-    color: white;
+.Map-columns span {
+    font-size: 30px; 
+    font-weight: 500;
+    text-align: center; 
 }
 
 /*=============================
-    Leaflet END
+    Tab Container Styling
 ===============================*/
+
 .tab-map-container {
     display: flex;
     gap: 20px;
-    width: 1200px;
-    height: 500px;
+    width: 1200px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    flex: 0 0 auto; /* Prevents resizing */
 }
 
 .tablink {
@@ -691,7 +736,6 @@ option {
     padding: 14px 16px;
     font-size: 17px;
     width: 100%;
-  
 }
 
 .tablink:hover {
@@ -703,24 +747,24 @@ option {
     display: none;
     padding: 20px;
     text-align: center;
-    width: 600px;
+    width: 600px; /* Fixed width */
+    flex: 0 0 auto; /* Prevents resizing */
+
 }
-  .Map-columns span{
-    font-size: 30px; 
-    font-weight: 500;
-    text-align: center; 
-  }
-  
-  .tablink:hover {
-    background-color: #777;
-  }
-  
-  #balingasag, #Medina, #Balingoan,
-   #Initao, #Laguindingan, #Lugait,#Jasaan,
-    #Opol, #Gingoog{
-    background-color: #4899eb;
-  }
-  .popup-content {
+
+.tabcontent h1, .tabcontent p {
+    color: white;
+}
+.tab-content a{
+    align-items: center;
+}
+
+
+/*=============================
+    Map Popup Content
+===============================*/
+
+.popup-content {
     background-color: white;
     border: 1px solid #b0bec5;
     border-radius: 8px;
@@ -744,25 +788,63 @@ option {
     font-weight: 700;
 }
 
-.popup-button {
-    padding: 5px 10px;
-    font-size: 12px;
-    background-color: #0056b3; /* Dark blue background */
-    color: white; /* White text */
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.popup-button:hover{
-    background: #2c2d3f;
+/*=============================
+    Dropdown Container
+===============================*/
 
+.dropdownss-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 900;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-width: 350px;
+}
+
+.dropdown.menu23 {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu23 > li {
+    display: inline-flex;
+}
+
+.menu23 label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/*=============================
+    Location Image Toggle
+===============================*/
+
+#locationImage {
+    display: none; /* Initially hidden */
+}
+
+/*=============================
+    Individual Tab Backgrounds
+===============================*/
+
+#balingasag, #Medina, #Balingoan,
+#Initao, #Laguindingan, #Lugait, #Jasaan,
+#Opol, #Gingoog {
+    background-color: #4899eb;
 }
 
 /*=============================
     Secret START
 ===============================*/
 .switch {
-    top: -80px;
+    left: 300px;
     font-size: 17px;
     position: relative;
     display: inline-block;
@@ -2229,10 +2311,15 @@ option {
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
     box-shadow: 0px 0px 10px #00000014;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Set a uniform height */
 }
 
 .blog .single-news img {
     width: 100%;
+    height: 200px; /* Adjust this height to fit your design */
+    object-fit: cover; /* Ensures the image scales while maintaining aspect ratio */
     margin: 0;
     padding: 0;
     -webkit-transition: all 0.4s ease;
@@ -2246,13 +2333,12 @@ option {
 }
 
 .blog .single-news .news-content {
-    text-align: left;
     background: #fff;
-    z-index: 99;
-    position: relative;
-    padding: 30px;
-    left: 0;
-    z-index: 0;
+    padding: 20px;
+    flex: 1; /* Fills available vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content evenly */
 }
 
 .blog .single-news .news-content:before {
@@ -2281,6 +2367,7 @@ option {
     font-weight: 600;
     margin-bottom: 10px;
     line-height: 24px;
+    min-height: 50px; /* Sets minimum height to keep all titles consistent */
 }
 
 .blog .single-news .news-body h2 a {
@@ -2293,27 +2380,29 @@ option {
 }
 
 .blog .single-news .news-content p {
-    font-weight: 400;
-    text-transform: capitalize;
     font-size: 13px;
-    letter-spacing: 0px;
     line-height: 23px;
+    color: #000;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 .blog .single-news .news-body .date {
     display: inline-block;
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     background: #1a76d1;
     color: #fff;
     padding: 4px 15px;
     border-radius: 3px;
-    font-size: 14px;
-    margin-bottom: 10px;
+    align-self: flex-start; /* Aligns date at the top */
 }
 
 .blog.grid .single-news {
     margin-top: 30px;
+    flex-basis: calc(33.33% - 20px); /* Adjust for 3-column layout */
+    max-width: 100%;
 }
 
 /* Blog Sidebar */

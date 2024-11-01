@@ -1,28 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
     function openCity(cityName, color) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
+        const tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none"; 
         }
-        
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
+    
+        const tablinks = document.getElementsByClassName("tablink");
+        for (let i = 0; i < tablinks.length; i++) {
             tablinks[i].style.backgroundColor = "";
         }
-        
+    
         document.getElementById(cityName).style.display = "block";
+    
+        document.getElementById("mySearch").value = "";
+        myFunction();
+    }
+    
+
+    function myFunction() {
+        const input = document.getElementById("mySearch").value.toUpperCase();
+        const activeTab = document.querySelector(".tabcontent:not([style*='display: none'])"); 
+        const columns = activeTab.getElementsByClassName("Map-columns");
+      
+        for (let i = 0; i < columns.length; i++) {
+            const span = columns[i].getElementsByTagName("span")[0];
+            if (span && span.innerHTML.toUpperCase().indexOf(input) > -1) {
+                columns[i].style.display = "";
+            } else {
+                columns[i].style.display = "none";
+            }
+        }
     }
 
     function initializeDropdown() {
         const subjectSelect = document.getElementById('subjects');
         const defaultOpenElement = document.getElementById("defaultOpen");
 
-
         subjectSelect.addEventListener('change', function () {
             const selectedOption = this.options[this.selectedIndex];
             if (selectedOption.value) {
-
                 openCity(selectedOption.value, ''); 
                 setMapView(selectedOption);
             }
@@ -35,39 +51,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
- function setMapView(locationElement) {
-    const coords = locationElement.dataset.coords.split(',').map(Number);
-    const description = locationElement.dataset.description;
+    function setMapView(locationElement) {
+        const coords = locationElement.dataset.coords.split(',').map(Number);
+        const description = locationElement.dataset.description;
+        const locationName = locationElement.value;
 
-    const locationName = locationElement.value;
+        // Log the coordinates for debugging
+        console.log('Flying to coordinates:', coords);
 
-    // Log the coordinates for debugging
-    console.log('Flying to coordinates:', coords);
+        if (currentMarker) {
+            map.removeLayer(currentMarker);
+        }
 
-    if (currentMarker) {
-        map.removeLayer(currentMarker);
+        // Fly to the specified coordinates
+        map.flyTo(coords, 15, { duration: 1 });
+
+        currentMarker = L.marker(coords).addTo(map).bindPopup(`
+            <div class="popup-content">
+                <h3 class="popup-title">${locationName}</h3>
+                <p class="popup-description">${description}</p>
+                <button 
+                    class="popup-button" 
+                    onclick="window.open('https://en.wikipedia.org/wiki/${locationName.replace(/\s/g, '_')}', '_blank')"
+                >
+                    More
+                </button>
+            </div>
+        `).openPopup();
     }
 
-    // Fly to the specified coordinates
-    map.flyTo(coords, 15, { duration: 1 });
-
-    currentMarker = L.marker(coords).addTo(map).bindPopup(`
-        <div class="popup-content">
-            <h3 class="popup-title">${locationName}</h3>
-            <p class="popup-description">${description}</p>
-            <button 
-                class="popup-button" 
-                onclick="window.open('https://en.wikipedia.org/wiki/${locationName.replace(/\s/g, '_')}', '_blank')"
-            >
-                More
-            </button>
-        </div>
-    `).openPopup();
-    
-}
-
     const map = L.map('map').setView([8.743003054482337, 124.77559089660646], 10);
-
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -82,26 +95,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const option = subjectSelect.options[i];
             const coords = option.dataset.coords.split(',').map(Number);
             const description = option.dataset.description;
-            const image = option.dataset.image;
             const locationName = option.value;
     
             L.marker(coords).addTo(map).bindPopup(`
-    <div class="popup-content">
-        <h3 class="popup-title">${locationName}</h3>
-        <p class="popup-description">${description}</p>
-        <button 
-            class="popup-button" 
-            onclick="window.open('https://en.wikipedia.org/wiki/${locationName.replace(/\s/g, '_')}', '_blank')"
-        >
-            More
-        </button>
-    </div>
+                <div class="popup-content">
+                    <h3 class="popup-title">${locationName}</h3>
+                    <p class="popup-description">${description}</p>
+                    <button 
+                        class="popup-button" 
+                        onclick="window.open('https://en.wikipedia.org/wiki/${locationName.replace(/\s/g, '_')}', '_blank')"
+                    >
+                        More
+                    </button>
+                </div>
             `);
         }
     }
+
     addAllMarkers();
-
-
-
     initializeDropdown();
+    document.getElementById("mySearch").addEventListener("input", myFunction);
 });

@@ -33,5 +33,6 @@ selectElement.addEventListener('change', function() {
 
 // Dark mode toggle
 document.getElementById('toggle-switch').addEventListener('change', function() {
-    document.body.style.backgroundColor = this.checked ? 'black' : 'white';
+  // When the toggle switch is checked (ON), set light mode (white background)
+  document.body.style.backgroundColor = this.checked ? 'white' : 'black';
 });

@@ -612,7 +612,9 @@ body {
     word-wrap: break-word;
     text-align: center;
 }
-
+.Mark-waypoint{
+    left: 0px;
+}
 
 .search-container {
     width: 100%;

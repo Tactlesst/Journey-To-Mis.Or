@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="fonts/icofont/icofont/icofont.css" />
   <link rel="stylesheet" href="fonts/icofont/icofont/icofont.min.css" />
   <link rel="stylesheet" href="css/icofont.css" />
+  <link rel="stylesheet" href="css/result.css" />
   <!-- Slicknav -->
   <link rel="stylesheet" href="css/slicknav.min.css" />
 
@@ -45,6 +46,7 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="js/dist/leaflet-routing-machine.css" />
 </head>
 
 <body>
@@ -504,62 +506,66 @@
         <p class="Title1">BALINGASAG due to its impressive array of colonial structures with hints of indigenous Mindanaoan architecture.</p>
         <div class="Map-Contents">
           <div class="Map-Pictures">
-            <div class="Map-columns" id="balingasag">
+            <div class="Map-columns">
+              <button id="toggleDelcarmen"><i class="fa-solid fa-location-dot"></i></button>
               <img id="balingasag-image" src="images/places/balingasag/Del Carmen Beach.jpg" alt="Balingasag Image">
+              
               <span>Del Carmen Beach</span>
               <p>A beach and pool club that offers affordable water sports like jet skiing
               </p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="gingoog-image" src="images/places/balingasag/Dahilayan Adventure Park.jpg" alt="Balingasag Image">
+              <button id="toggledahilayan"><i class="fa-solid fa-location-dot"></i></button>
+              <img id="balingasag-image" src="images/places/balingasag/Dahilayan Adventure Park.jpg" alt="Balingasag Image">
               <span>Dahilayan Adventure Park</span>
               <p>A top attraction in Balingasag</p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="balingoan-image" src="images/places/balingasag/Hardrock Lux spring Resort.jpg" alt="Balingasag Image">
+              <button id="toggleHardrock"><i class="fa-solid fa-location-dot"></i></button>
+              <img id="balingasag-image" src="images/places/balingasag/Hardrock Lux spring Resort.jpg" alt="Balingasag Image">
               <span>Hardrock Lux</span>
               <p>A popular attraction in Balingasag</p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="initao-image" src="images/places/balingasag/Seven Seas Waterpark and Resort.jpg" alt="Balingasag Image">
+              <img id="balingasag-image" src="images/places/balingasag/Seven Seas Waterpark and Resort.jpg" alt="Balingasag Image">
               <span>Seven Seas Waterpark and Resort</span>
               <p>A popular attraction in Balingasag </p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="jasaan-image" src="images/places/balingasag/Gaston Park.jpg" alt="Balingasag Image">
+              <img id="balingasag-image" src="images/places/balingasag/Gaston Park.jpg" alt="Balingasag Image">
               <span>Gaston Park</span>
               <p>A popular attraction in Balingasag</p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="laguindingan-image" src="images/places/balingasag/Plaza Divisoria.jpg" alt="Balingasag Image">
+              <img id="balingasag-image" src="images/places/balingasag/Plaza Divisoria.jpg" alt="Balingasag Image">
               <span>Plaza Divisoria</span>
               <p> A popular attraction in Balingasag </p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="lugait-image" src="images/places/balingasag/Amaya View.jpg" alt="Balingasag Image">
+              <img id="balingasag-image" src="images/places/balingasag/Amaya View.jpg" alt="Balingasag Image">
               <span>Amaya View</span>
               <p>A popular attraction in Balingasag</p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="medina-image" src="images/places/balingasag/pelaz" alt="Balingasag Image">
+              <img id="balingasag-image" src="images/places/balingasag/pelaz" alt="Balingasag Image">
               <span>Pelaez Sports Center</span>
               <p>A popular attraction in Balingasag</p>
               <a href="#" class="btn">View More</a>
             </div>
             <div class="Map-columns">
-              <img id="opol-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+              <img id="balingasag-image" src="images/BALINGASAG.png" alt="Balingasag Image">
               <span>Sunken Cemetery</span>
               <p>A farm</p>
               <a href="#" class="btn">View More</a>
             </div>
-            <div class="Map-columns">
+            <div class="balingasag-image">
               <img id="opol-image" src="images/BALINGASAG.png" alt="Balingasag Image">
               <span>Kagay Whitewater Rafting</span>
               <p>A river rafting and tubing destination</p>
@@ -2276,6 +2282,9 @@
   <script src="js/leaflet/leaflet.js"></script>
   <script src="js/leaflet1.js"></script>
   <script src="js/toggle.js"></script>
+  <script src="js/dist/Control.Geocoder.js"></script>
+  <script src="js/dist/config.js"></script>
+  <script src="js/dist/leaflet-routing-machine.min.js"></script>
 
 </body>
 

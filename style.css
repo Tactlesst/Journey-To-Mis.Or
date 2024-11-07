@@ -581,20 +581,19 @@ body {
     align-items: center;
     position: relative;
     margin: 30px auto;
-    border: 2px solid rgba(40, 40, 43, 0.5);
-    border-radius: 5px;
     width: 1200px; /* Width of the container */
     height: 550px; /* Height of the container */
     padding: 10px;
     box-sizing: border-box;
+    border: 2px solid rgba(40, 40, 43, 0.5);
+    border-radius: 5px;
 }
 
 #map {
     width: 100%;
     height: 500px; /* or any height you prefer */
     min-height: 400px; /* this helps ensure a minimum height for the map */
-    border: 2px solid rgba(40, 40, 43, 0.5);
-    border-radius: 5px;
+
     margin-bottom: 20px;
 }
 
@@ -602,6 +601,8 @@ body {
     height: 100%;
     display: flex;
     width: 100%;
+    border: 2px solid rgba(40, 40, 43, 0.5);
+    border-radius: 5px;
 }
 
 /*=============================
@@ -624,8 +625,6 @@ body {
     margin-left: 965px;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid rgba(40, 40, 43, 0.5);
-    border-radius: 5px;
     top: 8px; /* Adjust the distance from the top */
     left: 400px; /* Center align horizontally */
     color: white;
@@ -816,8 +815,6 @@ option {
     z-index: 900;
     background-color: #fff;
     padding: 10px;
-    border: 2px solid rgba(40, 40, 43, 0.5);
-    border-radius: 5px;
     max-width: 300px;
     max-height: 40px;
 }
@@ -1346,16 +1343,26 @@ option {
 .why-choose .choose-right {
     height: 100%;
     width: 100%;
-    background-image: url("images/img/slider1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
 
+.why-choose .choose-right .promo-video {
+    position: absolute; /* Position the waves behind the video */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Place it behind the video */
+    width: 100%;
+    height: 100%;
+}
+
 .why-choose .choose-right .video {
     color: #fff;
-    height: 70px;
+    height: 120px;
     width: 70px;
     line-height: 70px;
     text-align: center;
@@ -1369,9 +1376,36 @@ option {
     background: #1a76d1;
     padding-left: 4px;
 }
-
+.why-choose .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 10; /* Ensure it's above the video */
+}
+.why-choose .play-icon:hover {
+    opacity: 0.7;
+}
+#videoPlayer.playing + .play-icon {
+    display: none;
+}
 .why-choose .choose-right .video:hover {
     transform: scale(1.1);
+}
+
+.why-choose .video-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.why-choose .video-image video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .why-choose .video-image .waves-block .waves {
@@ -1381,7 +1415,6 @@ option {
     background: #fff;
     opacity: 0;
     border-radius: 100%;
-    -webkit-animation: waves 3s ease-in-out infinite;
     animation: waves 3s ease-in-out infinite;
     left: 50%;
     margin-left: -100px;
@@ -1390,19 +1423,35 @@ option {
 }
 
 .why-choose .video-image .waves-block .wave-1 {
-    -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
 
 .why-choose .video-image .waves-block .wave-2 {
-    -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
 
 .why-choose .video-image .waves-block .wave-3 {
-    -webkit-animation-delay: 2s;
     animation-delay: 2s;
 }
+
+/* Customize wave animations if needed */
+@keyframes waves {
+    0% {
+        transform: scale(0.2, 0.2);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0.9, 0.9);
+        opacity: 0;
+    }
+}
+.hidden {
+    display: none;
+}
+
 
 /*=======================
 	End Why choose CSS
@@ -2682,7 +2731,7 @@ option {
 /* Blockqoute */
 
 .news-single blockquote {
-    background-image: url("images/img/blockqoute-bg.jpg");
+    background-image: url("images/Homebanner/4b.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3439,7 +3488,7 @@ option {
 }
 
 .register .register-left {
-    background-image: url(images/img/signup-bg.jpg);
+    background-image: url(images/Homebanner/3b.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4137,7 +4186,7 @@ option {
 .about-image {
     width: 100%;
     height: 100%;
-    background-image: url(images/img/about-img.jpg);
+    background-image: url(images/Homebanner/2b.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4334,7 +4383,7 @@ option {
 .our-mission-image {
     width: 100%;
     height: 100%;
-    background-image: url(images/img/mission-img.jpg);
+    background-image: url(images/Homebanner/1b.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -221,12 +221,6 @@ $(".hero-slider").owlCarousel({
             $(".sidebar-menu").removeClass("active");
         });
 
-        /*=====================
-			Video Popup JS
-		=======================*/
-        $(".video-popup").magnificPopup({
-            type: "iframe",
-        });
 
         /*================
 			Wow JS

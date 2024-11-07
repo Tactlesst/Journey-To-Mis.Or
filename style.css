@@ -505,7 +505,7 @@ body {
 
 .slider .single-slider .btn.primary {
     background: #2c2d3f;
-    color: #fff;
+    color: #888;
 }
 
 .slider .single-slider .btn.primary:before {
@@ -1835,13 +1835,17 @@ option {
     padding: 40px 30px;
     margin: 5px;
     margin-bottom: 27px;
-    margin-right: 30px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    margin: 0;
     margin: 30px 20px;
+    width: 100%;
+    max-width: 290px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonials .single-testimonial:hover {
@@ -1861,6 +1865,9 @@ option {
 .testimonials .single-testimonial p {
     color: #868686;
     font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+    overflow: hidden; /* Ensure text overflow is handled */
 }
 
 .testimonials .single-testimonial .name {
@@ -2030,7 +2037,7 @@ option {
     height: 15px;
     width: 15px;
     line-height: 15px;
-    color: #fff;
+    color: #888;
     background: #1a76d1;
     text-align: center;
     border-radius: 100%;
@@ -2052,126 +2059,6 @@ option {
 	End Departments CSS
 ============================*/
 
-/*=============================
-	Start Pricing Table CSS
-===============================*/
-
-.pricing-table {
-    background: #f9f9f9;
-    position: relative;
-}
-
-.pricing-table .single-table {
-    background: #fff;
-    border: 1px solid #ddd;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    margin: 15px 0;
-    padding: 45px 35px 30px 35px;
-}
-
-/* Table Head */
-
-.pricing-table .single-table .table-head {
-    text-align: center;
-}
-
-.pricing-table .single-table .icon i {
-    font-size: 65px;
-    color: #1a76d1;
-}
-
-.pricing-table .single-table .title {
-    font-size: 21px;
-    color: #2c2d3f;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.pricing-table .single-table .amount {
-    font-size: 36px;
-    font-weight: 600;
-    color: #1a76d1;
-}
-
-.pricing-table .single-table .amount span {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 400;
-    color: #868686;
-    margin-left: 8px;
-}
-
-/* Table List */
-
-.pricing-table .single-table .table-list {
-    padding: 10px 0;
-    text-align: left;
-    margin-top: 30px;
-}
-
-.pricing-table .table-list li {
-    position: relative;
-    color: #666;
-    text-transform: capitalize;
-    margin-bottom: 18px;
-    padding-right: 32px;
-}
-
-.pricing-table .table-list li:last-child {
-    margin-bottom: 0px;
-}
-
-.pricing-table .table-list li.cross i {
-    background: #aaaaaa;
-}
-
-.pricing-table .table-list i {
-    font-size: 7px;
-    text-align: center;
-    margin-right: 10px;
-    position: absolute;
-    right: 0;
-    height: 16px;
-    width: 16px;
-    line-height: 16px;
-    text-align: center;
-    color: #fff;
-    background: #1a76d1;
-    border-radius: 100%;
-    padding-left: 1px;
-}
-
-/* Table Bottom */
-
-.pricing-table .table-bottom {
-    margin-top: 25px;
-}
-
-.pricing-table .btn {
-    padding: 12px 25px;
-    width: 100%;
-    color: #fff;
-    background: #1a76d1;
-}
-
-.pricing-table .btn:before {
-    background: #2c2d3f;
-}
-
-.pricing-table .btn:hover {
-    color: #fff;
-}
-
-.pricing-table .btn i {
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-/*=============================
-	End Pricing Table CSS
-===============================*/
 
 /*========================
 	Start Clients CSS
@@ -2700,7 +2587,7 @@ option {
     color: #1a76d1;
 }
 
-/* Blog Meta */
+
 
 .news-single {
     background: #fff;

@@ -440,626 +440,630 @@
       class="on">
   </label>
   <section class="Leaflet-Area">
-  <section class="Leaflef-map">
-    <div class="search-container">
-      <div class="Search-map">
-        <input type="text" id="mySearch" placeholder="Search.." onkeyup="myFunction()" title="Type in a category">
+    <section class="Leaflef-map">
+      <div class="search-container">
+        <div class="Search-map">
+          <input type="text" id="mySearch" placeholder="Search.." onkeyup="myFunction()" title="Type in a category">
+        </div>
       </div>
-    </div>
-    <div class="dropdownss-container">
-      <ul class="menu23">
-        <li>
-          <label>Location:</label>
-          <select id="subjects">
-            <option value=""disabled>Select a location</option>
-            <option value="balingasag" id="defaultOpen" data-coords="8.743003054482337,124.77559089660646"
-              data-description="Balingasag is a municipality in Misamis Oriental, Philippines."
-              data-image="images/BALINGASAG.png">
-              Balingasag
-            </option>
-            <option value="Medina" data-coords="8.911358946831657,125.02432823181154"
-              data-description="Medina is another location in Misamis Oriental." data-image="images/MEDINA.png">
-              Medina
-            </option>
-            <option value="Opol" data-coords="8.521225682813045,124.5747470855713"
-              data-description="Opol is another location in Misamis Oriental." data-image="images/OPOL.jpg">
-              Opol
-            </option>
-            <option value="Gingoog" data-coords="8.82384043206159,125.10166168212892"
-              data-description="Gingoog is another location in Misamis Oriental." data-image="images/GINGOOG.png">
-              Gingoog
-            </option>
-            <option value="Balingoan" data-coords="9.004070083300151,124.85047817230226"
-              data-description="Balingoan is another location in Misamis Oriental." data-image="images/BALINGOAN.jpg">
-              Balingoan
-            </option>
-            <option value="Initao" data-coords="8.49750009121942,124.30532455444337"
-              data-description="Initao is another location in Misamis Oriental." data-image="images/INITAO.jpg">
-              Initao
-            </option>
-            <option value="Laguindingan" data-coords="8.57461348506942,124.44072246551515"
-              data-description="Laguindingan is another location in Misamis Oriental."
-              data-image="images/LAGUINDINGAN.png">
-              Laguindingan
-            </option>
-            <option value="Lugait" data-coords="8.342929683969652,124.26013469696046"
-              data-description="Lugait is another location in Misamis Oriental." data-image="images/LUGAIT.png">
-              Lugait
-            </option>
-            <option value="Jasaan" data-coords="8.64958987649745,124.75421905517586"
-              data-description="Jasaan is another location in Misamis Oriental." data-image="images/JASAAN.png">
-              Jasaan
-            </option>
-          </select>
-        </li>
-      </ul>
-    </div>
-    <!-- Map Placement leaflet -->
+      <div class="dropdownss-container">
+        <ul class="menu23">
+          <li>
+            <label>Location:</label>
+            <select id="subjects">
+              <option value="" disabled>Select a location</option>
+              <option value="balingasag" id="defaultOpen" data-coords="8.743003054482337,124.77559089660646"
+                data-description="Balingasag is a municipality in Misamis Oriental, Philippines."
+                data-image="images/BALINGASAG.png">
+                Balingasag
+              </option>
+              <option value="Medina" data-coords="8.911358946831657,125.02432823181154"
+                data-description="Medina is another location in Misamis Oriental." data-image="images/MEDINA.png">
+                Medina
+              </option>
+              <option value="Opol" data-coords="8.521225682813045,124.5747470855713"
+                data-description="Opol is another location in Misamis Oriental." data-image="images/OPOL.jpg">
+                Opol
+              </option>
+              <option value="Gingoog" data-coords="8.82384043206159,125.10166168212892"
+                data-description="Gingoog is another location in Misamis Oriental." data-image="images/GINGOOG.png">
+                Gingoog
+              </option>
+              <option value="Balingoan" data-coords="9.004070083300151,124.85047817230226"
+                data-description="Balingoan is another location in Misamis Oriental." data-image="images/BALINGOAN.jpg">
+                Balingoan
+              </option>
+              <option value="Initao" data-coords="8.49750009121942,124.30532455444337"
+                data-description="Initao is another location in Misamis Oriental." data-image="images/INITAO.jpg">
+                Initao
+              </option>
+              <option value="Laguindingan" data-coords="8.57461348506942,124.44072246551515"
+                data-description="Laguindingan is another location in Misamis Oriental."
+                data-image="images/LAGUINDINGAN.png">
+                Laguindingan
+              </option>
+              <option value="Lugait" data-coords="8.342929683969652,124.26013469696046"
+                data-description="Lugait is another location in Misamis Oriental." data-image="images/LUGAIT.png">
+                Lugait
+              </option>
+              <option value="Jasaan" data-coords="8.64958987649745,124.75421905517586"
+                data-description="Jasaan is another location in Misamis Oriental." data-image="images/JASAAN.png">
+                Jasaan
+              </option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <!-- Map Placement leaflet -->
 
-    <div class="tab-map-container">
-      <div class="map-container" id="map-container">
-        <div id="map"></div>
-      </div>
-      <div id="balingasag" class="tabcontent">
-        <h1>BALINGASAG</h1>
-        <p class="Title1">BALINGASAG due to its impressive array of colonial structures with hints of indigenous Mindanaoan architecture.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <button id="toggleDelcarmen"><i class="fa-solid fa-location-dot">Track</i></button>
-              <img id="balingasag-image" src="images/places/balingasag/Del Carmen Beach.jpg" alt="Balingasag Image">
-              
-              <span>Del Carmen Beach</span>
-              <p>A beach and pool club that offers affordable water sports like jet skiing
-              </p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <button id="toggledahilayan"><i class="fa-solid fa-location-dot">Track</i></button>
-              <img id="balingasag-image" src="images/places/balingasag/Dahilayan Adventure Park.jpg" alt="Balingasag Image">
-              <span>Dahilayan Adventure Park</span>
-              <p>A top attraction in Balingasag</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <button id="toggleHardrock"><i class="fa-solid fa-location-dot">Track</i></button>
-              <img id="balingasag-image" src="images/places/balingasag/Hardrock Lux spring Resort.jpg" alt="Balingasag Image">
-              <span>Hardrock Lux</span>
-              <p>A popular attraction in Balingasag</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/places/balingasag/Seven Seas Waterpark and Resort.jpg" alt="Balingasag Image">
-              <span>Seven Seas Waterpark and Resort</span>
-              <p>A popular attraction in Balingasag </p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/places/balingasag/Gaston Park.jpg" alt="Balingasag Image">
-              <span>Gaston Park</span>
-              <p>A popular attraction in Balingasag</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/places/balingasag/Plaza Divisoria.jpg" alt="Balingasag Image">
-              <span>Plaza Divisoria</span>
-              <p> A popular attraction in Balingasag </p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/places/balingasag/Amaya View.jpg" alt="Balingasag Image">
-              <span>Amaya View</span>
-              <p>A popular attraction in Balingasag</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/places/balingasag/pelaz" alt="Balingasag Image">
-              <span>Pelaez Sports Center</span>
-              <p>A popular attraction in Balingasag</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-              <span>Sunken Cemetery</span>
-              <p>A farm</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="balingasag-image">
-              <img id="opol-image" src="images/BALINGASAG.png" alt="Balingasag Image">
-              <span>Kagay Whitewater Rafting</span>
-              <p>A river rafting and tubing destination</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-          </div>
+      <div class="tab-map-container">
+        <div class="map-container" id="map-container">
+          <div id="map"></div>
         </div>
-      </div>
+        <div id="balingasag" class="tabcontent">
+          <h1>BALINGASAG</h1>
+          <p class="Title1">BALINGASAG due to its impressive array of colonial structures with hints of indigenous
+            Mindanaoan architecture.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <button id="toggleDelcarmen"><i class="fa-solid fa-location-dot">Track</i></button>
+                <img id="balingasag-image" src="images/places/balingasag/Del Carmen Beach.jpg" alt="Balingasag Image">
 
-      <div id="Medina" class="tabcontent">
-        <h1>Medina</h1>
-        <p>Medina is the capital of Medina.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>BALINGASG IS THE BEAUTIFUL WORLD</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="gingoog-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>BALINGASG IS THE BEAUTIFUL WORLD</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingoan-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="initao-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="jasaan-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="laguindingan-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="lugait-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="medina-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="opol-image" src="images/MEDINA.png" alt="MEDINA Image">
-              <span>MEDINA</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
+                <span>Del Carmen Beach</span>
+                <p>A beach and pool club that offers affordable water sports like jet skiing
+                </p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <button id="toggledahilayan"><i class="fa-solid fa-location-dot">Track</i></button>
+                <img id="balingasag-image" src="images/places/balingasag/Dahilayan Adventure Park.jpg"
+                  alt="Balingasag Image">
+                <span>Dahilayan Adventure Park</span>
+                <p>A top attraction in Balingasag</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <button id="toggleHardrock"><i class="fa-solid fa-location-dot">Track</i></button>
+                <img id="balingasag-image" src="images/places/balingasag/Hardrock Lux spring Resort.jpg"
+                  alt="Balingasag Image">
+                <span>Hardrock Lux</span>
+                <p>A popular attraction in Balingasag</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/places/balingasag/Seven Seas Waterpark and Resort.jpg"
+                  alt="Balingasag Image">
+                <span>Seven Seas Waterpark and Resort</span>
+                <p>A popular attraction in Balingasag </p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/places/balingasag/Gaston Park.jpg" alt="Balingasag Image">
+                <span>Gaston Park</span>
+                <p>A popular attraction in Balingasag</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/places/balingasag/Plaza Divisoria.jpg" alt="Balingasag Image">
+                <span>Plaza Divisoria</span>
+                <p> A popular attraction in Balingasag </p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/places/balingasag/Amaya View.jpg" alt="Balingasag Image">
+                <span>Amaya View</span>
+                <p>A popular attraction in Balingasag</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/places/balingasag/pelaz" alt="Balingasag Image">
+                <span>Pelaez Sports Center</span>
+                <p>A popular attraction in Balingasag</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+                <span>Sunken Cemetery</span>
+                <p>A farm</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="balingasag-image">
+                <img id="opol-image" src="images/BALINGASAG.png" alt="Balingasag Image">
+                <span>Kagay Whitewater Rafting</span>
+                <p>A river rafting and tubing destination</p>
+                <a href="#" class="btn">View More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="Opol" class="tabcontent">
-        <h1>Opol</h1>
-        <p>Opol is the capital of Opol.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="gingoog-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingoan-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="initao-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="jasaan-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="laguindingan-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="lugait-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="medina-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="opol-image" src="images/OPOL.jpg" alt="Opol Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
+        <div id="Medina" class="tabcontent">
+          <h1>Medina</h1>
+          <p>Medina is the capital of Medina.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>BALINGASG IS THE BEAUTIFUL WORLD</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="gingoog-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>BALINGASG IS THE BEAUTIFUL WORLD</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingoan-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="initao-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="jasaan-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="laguindingan-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="lugait-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="medina-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="opol-image" src="images/MEDINA.png" alt="MEDINA Image">
+                <span>MEDINA</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="Gingoog" class="tabcontent">
-        <h1>Gingoog</h1>
-        <p>Gingoog is the capital of Gingoog.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="balingasag-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="gingoog-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="balingoan-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="initao-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="jasaan-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="laguindingan-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="lugait-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="medina-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="opol-image" src="images/GINGOOG.png" alt="Gingoog Image">
-              <span>Gingoog</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="Balingoan" class="tabcontent">
-        <h1>Balingoan</h1>
-        <p>Balingoan is the capital of Balingoan.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
-              <span>Balingoan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
+        <div id="Opol" class="tabcontent">
+          <h1>Opol</h1>
+          <p>Opol is the capital of Opol.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="gingoog-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingoan-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="initao-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="jasaan-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="laguindingan-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="lugait-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="medina-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="opol-image" src="images/OPOL.jpg" alt="Opol Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="Initao" class="tabcontent">
-        <h1>Initao</h1>
-        <p>Initao is the capital of Initao.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
-              <span>Initao</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="Laguindingan" class="tabcontent">
-        <h1>Laguindingan</h1>
-        <p>Laguindingan is the capital of Laguindingan.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Opol</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
-              <span>Laguindingan</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
+
+        <div id="Gingoog" class="tabcontent">
+          <h1>Gingoog</h1>
+          <p>Gingoog is the capital of Gingoog.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="balingasag-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="gingoog-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="balingoan-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="initao-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="jasaan-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="laguindingan-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="lugait-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="medina-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="opol-image" src="images/GINGOOG.png" alt="Gingoog Image">
+                <span>Gingoog</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="Lugait" class="tabcontent">
-        <h1>Lugait</h1>
-        <p>Lugait is the capital of Lugait.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
-              <span>Lugait</span>
-              <p>DETAILS</p>
+        <div id="Balingoan" class="tabcontent">
+          <h1>Balingoan</h1>
+          <p>Balingoan is the capital of Balingoan.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Balingoan-image" src="images/BALINGOAN.jpg" alt="Balingoan Image">
+                <span>Balingoan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="Jasaan" class="tabcontent">
-        <h1>Jasaan</h1>
-        <p>Jasaan is the capital of Jasaan.</p>
-        <div class="Map-Contents">
-          <div class="Map-Pictures">
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
-            </div>
-            <div class="Map-columns">
-              <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
-              <span>Jasaan</span>
-              <p>DETAILS</p>
+        <div id="Initao" class="tabcontent">
+          <h1>Initao</h1>
+          <p>Initao is the capital of Initao.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Initao-image" src="images/INITAO.jpg" alt="Initao Image">
+                <span>Initao</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
             </div>
           </div>
-          <!-- Image of the places in Balingasag -->
-  </section>
+        </div>
+        <div id="Laguindingan" class="tabcontent">
+          <h1>Laguindingan</h1>
+          <p>Laguindingan is the capital of Laguindingan.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Opol</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Laguindingan-image" src="images/LAGUINDINGAN.png" alt="Laguindingan Image">
+                <span>Laguindingan</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Lugait" class="tabcontent">
+          <h1>Lugait</h1>
+          <p>Lugait is the capital of Lugait.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+                <a href="#" class="btn">View More</a>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Lugait-image" src="images/LUGAIT.png" alt="Lugait Image">
+                <span>Lugait</span>
+                <p>DETAILS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Jasaan" class="tabcontent">
+          <h1>Jasaan</h1>
+          <p>Jasaan is the capital of Jasaan.</p>
+          <div class="Map-Contents">
+            <div class="Map-Pictures">
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/Blogspaces-Images/blog-post-1.jpg" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+              <div class="Map-columns">
+                <img id="Jasaan-image" src="images/JASAAN.png" alt="Jasaan Image">
+                <span>Jasaan</span>
+                <p>DETAILS</p>
+              </div>
+            </div>
+            <!-- Image of the places in Balingasag -->
+    </section>
   </section>
   <!-- Endleaflet-->
   <!-- Start Fun-facts -->
@@ -1380,76 +1384,92 @@
           <div class="owl-carousel testimonial-slider">
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi1.png" alt="#" />
+              <img src="images/User/userf.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "The website was incredibly easy to navigate, and I found all the information I needed quickly. The
+                layout is so clean and visually appealing!"
               </p>
               <h4 class="name">Ruhfayed Sakib</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi2.png" alt="#" />
+              <img src="images/User/userf.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "Beautiful design and very informative! The brochures gave me a great feel for the destinations and
+                options available. I’m excited to plan my trip!"
               </p>
               <h4 class="name">Shakil Hossain</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi3.png" alt="#" />
+              <img src="images/User/userm.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "I loved the website! It was so easy to find exactly what I was looking for, and the brochures were just
+                what I needed to finalize my decision."
               </p>
               <h4 class="name">Naimur Rahman</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi1.png" alt="#" />
+              <img src="images/User/userf.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "The interactive features on the site made browsing fun and engaging. I felt like I was getting a
+                mini-preview of each place."
               </p>
-              <h4 class="name">Ruhfayed Sakib</h4>
+              <h4 class="name">Sarah Ahmed</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi2.png" alt="#" />
+              <img src="images/User/userm.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "This site is a go-to for me now! The brochure section is packed with valuable info, making it much
+                easier to plan my travels."
               </p>
-              <h4 class="name">Shakil Hossain</h4>
+              <h4 class="name">Michael Lee</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi3.png" alt="#" />
+              <img src="images/User/userf.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "Clear, concise, and beautifully laid out. I felt like I could easily explore all my options without any
+                hassle."
               </p>
-              <h4 class="name">Naimur Rahman</h4>
+              <h4 class="name">Maria Gonzales</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi1.png" alt="#" />
+              <img src="images/User/userm.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "Impressive design! The website’s ease of use made it a breeze to find and download brochures for
+                destinations I’m interested in."
               </p>
-              <h4 class="name">Ruhfayed Sakib</h4>
+              <h4 class="name">John Doe</h4>
             </div>
             <!-- End Single Testimonial -->
+
             <!-- Start Single Testimonial -->
             <div class="single-testimonial">
-              <img src="images/img/testi2.png" alt="#" />
+              <img src="images/User/userf.png" alt="#" />
               <p>
-                Lorem ipsum dolor sit amet consectetur eliet adipiscing. Aliquam nec suscipit turpis, vel pretium eros.
+                "The brochures provided on this site gave a much clearer idea of each destination, and I love that I
+                could download them to review offline."
               </p>
-              <h4 class="name">Naimur Rahman</h4>
+              <h4 class="name">Linda Parks</h4>
             </div>
             <!-- End Single Testimonial -->
+
           </div>
         </div>
       </div>
@@ -1463,7 +1483,8 @@
         <div class="col-lg-12">
           <div class="section-title">
             <h2>We Offer Different Departments to Assist You Upon Arrival</h2>
-<p>Our dedicated departments are ready to support you and make your visit more enjoyable and stress-free. Connect with our team upon arrival for any assistance you need.</p>
+            <p>Our dedicated departments are ready to support you and make your visit more enjoyable and stress-free.
+              Connect with our team upon arrival for any assistance you need.</p>
 
           </div>
         </div>
@@ -1477,7 +1498,8 @@
                 <i class="icofont-heart-beat"></i><span class="first">HR</span><span class="second">HR Department</span>
               </a>
               <a class="list-group-item" data-bs-toggle="list" href="#tab2" role="tab">
-                <i class="icofont-brain-alt"></i><span class="first">CR</span><span class="second">Customer Relations</span>
+                <i class="icofont-brain-alt"></i><span class="first">CR</span><span class="second">Customer
+                  Relations</span>
               </a>
 
               <a class="list-group-item" data-bs-toggle="list" href="#tab3" role="tab">
@@ -1485,7 +1507,8 @@
               </a>
 
               <a class="list-group-item" data-bs-toggle="list" href="#tab4" role="tab">
-                <i class="icofont-heart-beat"></i><span class="first">EA</span><span class="second">Emergency Assistance</span>
+                <i class="icofont-heart-beat"></i><span class="first">EA</span><span class="second">Emergency
+                  Assistance</span>
               </a>
 
               <a class="list-group-item" data-bs-toggle="list" href="#tab5" role="tab">
@@ -1502,17 +1525,21 @@
                       <div class="department-left">
                         <h3>HR Department</h3>
                         <p class="p1">
-                          “Our priority is your comfort and satisfaction, from the moment you arrive to the moment you leave.”
+                          “Our priority is your comfort and satisfaction, from the moment you arrive to the moment you
+                          leave.”
                         </p>
                         <p>
-                          Welcome to the HR Department, where we prioritize making your travel experience smooth and enjoyable. Our friendly team is here to help with any personnel-related concerns.
+                          Welcome to the HR Department, where we prioritize making your travel experience smooth and
+                          enjoyable. Our friendly team is here to help with any personnel-related concerns.
                         </p>
                         <ul class="list">
                           <li>
-                            <i class="fa fa-check"></i>Personalized Support - Reach out to us for one-on-one assistance during your trip.
+                            <i class="fa fa-check"></i>Personalized Support - Reach out to us for one-on-one assistance
+                            during your trip.
                           </li>
                           <li>
-                            <i class="fa fa-check"></i> Local Expertise - Get insider tips and guidance for an unforgettable experience
+                            <i class="fa fa-check"></i> Local Expertise - Get insider tips and guidance for an
+                            unforgettable experience
                           </li>
                         </ul>
                       </div>
@@ -1534,17 +1561,20 @@
                           “We're here to make every moment of your journey memorable, one smile at a time.”
                         </p>
                         <p>
-                          Our Customer Relations team is here to ensure all your needs are met, from arrival to departure. Trust us to enhance your journey with care and expertise.
+                          Our Customer Relations team is here to ensure all your needs are met, from arrival to
+                          departure. Trust us to enhance your journey with care and expertise.
                         </p>
                         <ul class="list">
                           <li>
-                            <i class="fa fa-check"></i>Dedicated Assistance - We're here to resolve any issues and ensure your comfort.
+                            <i class="fa fa-check"></i>Dedicated Assistance - We're here to resolve any issues and
+                            ensure your comfort.
                           </li>
                           <li>
                             <i class="fa fa-check"></i> Feedback Matters - Your feedback helps us continuously improve.
                           </li>
                           <li>
-                            <i class="fa fa-check"></i>Local Tips & Recommendations - Discover the best spots with our team’s suggestions.
+                            <i class="fa fa-check"></i>Local Tips & Recommendations - Discover the best spots with our
+                            team’s suggestions.
                           </li>
                         </ul>
                       </div>
@@ -1567,17 +1597,21 @@
                           “Experience the beauty of each destination with the guidance of those who know it best”
                         </p>
                         <p>
-                          Let our Tour Assistance department guide you to the best spots around. We'll help you experience the highlights without missing a thing.
+                          Let our Tour Assistance department guide you to the best spots around. We'll help you
+                          experience the highlights without missing a thing.
                         </p>
                         <ul class="list">
                           <li>
-                            <i class="fa fa-check"></i>Customized Tours - Get personalized tour options tailored to your interests. 
+                            <i class="fa fa-check"></i>Customized Tours - Get personalized tour options tailored to your
+                            interests.
                           </li>
                           <li>
-                            <i class="fa fa-check"></i> Safety First - Travel with peace of mind knowing we’re here to help.
+                            <i class="fa fa-check"></i> Safety First - Travel with peace of mind knowing we’re here to
+                            help.
                           </li>
                           <li>
-                            <i class="fa fa-check"></i>ocal Connections - Enjoy connections to the best guides and spots.
+                            <i class="fa fa-check"></i>ocal Connections - Enjoy connections to the best guides and
+                            spots.
                           </li>
                         </ul>
                       </div>
@@ -1600,14 +1634,16 @@
                           "Your safety is our commitment, no matter where the road takes you."
                         </p>
                         <p>
-                          Our Emergency Assistance team is prepared to support you in any urgent situation. Your safety is our top priority.
+                          Our Emergency Assistance team is prepared to support you in any urgent situation. Your safety
+                          is our top priority.
                         </p>
                         <ul class="list">
                           <li>
                             <i class="fa fa-check"></i>Rapid Response - Contact us for immediate help in any emergency.
                           </li>
                           <li>
-                            <i class="fa fa-check"></i>Local Resources - We connect you to local resources to get the help you need fast.
+                            <i class="fa fa-check"></i>Local Resources - We connect you to local resources to get the
+                            help you need fast.
                           </li>
                         </ul>
                       </div>
@@ -1635,20 +1671,22 @@
                         </p>
                         <ul class="list">
                           <li>
-                            <i class="fa fa-check"></i>Answering Your Questions - Reach out to us with any travel questions.
+                            <i class="fa fa-check"></i>Answering Your Questions - Reach out to us with any travel
+                            questions.
                           </li>
                           <li>
                             <i class="fa fa-check"></i> Information Desk - We’ll guide you to the right resources.
                           </li>
                           <li>
-                            <i class="fa fa-check"></i>Friendly Support - Our team is here to make your stay enjoyable and stress-free.
+                            <i class="fa fa-check"></i>Friendly Support - Our team is here to make your stay enjoyable
+                            and stress-free.
                           </li>
                         </ul>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="department-right">
-                        <img src="images/Department/GI.jpg" alt="#"/>
+                        <img src="images/Department/GI.jpg" alt="#" />
                       </div>
                     </div>
                   </div>

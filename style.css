@@ -1543,11 +1543,15 @@ option {
 
 .portfolio .single-pf {
     position: relative;
+    width: 330px; /* Set a fixed width for all portfolio items */
+    height: 300px; /* Set a fixed height for all portfolio items */
+    overflow: hidden;
 }
 
 .portfolio .single-pf img {
     height: 100%;
     width: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
 }
 
 .portfolio .single-pf:before {
@@ -1656,6 +1660,7 @@ option {
 .pf-details .image-slider img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .pf-details .date {

@@ -4723,55 +4723,51 @@ option {
 	End Footer CSS
 ===========================*/
 
-.rtl {
-    direction: rtl;
-}
+  /* Modal Background Color */
+.modal-content {
+    background-color: #f8f9fa;  /* Light background for the modal */
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .modal-header {
+    background-color: #007bff;  /* Blue background for modal header */
+    color: #fff;
+    border-bottom: none;
+    padding: 1.5rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .modal-body {
+    padding: 2rem;
+  }
+  
+  /* Modal Footer Button Colors */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
 
-.owl-carousel,
-.color-plate {
-    direction: ltr;
-}
-
-.header .top-link,
-.header .logo {
-    float: right;
-}
-
-.header .top-contact li:first-child {
-    margin-right: 0;
-}
-
-.header .nav li:first-child {
-    margin: 0;
-}
-
-.header .top-link li:first-child {
-    margin: 0;
-}
-
-.header .top-link li:last-child {
-    margin-right: 15px;
-}
-
-.header .top-contact,
-.get-quote {
-    float: left;
-}
-
-.header .top-contact li:last-child {
-    margin-right: 25px;
-}
-
-.header .top-contact li i {
-    margin: 0;
-    margin-left: 8px;
-}
-
-.header .nav li .dropdown {
-    left: auto;
-    right: 0;
-}
-
-.header .widget-main {
-    float: left;
+.welcome {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
 }

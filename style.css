@@ -1543,7 +1543,7 @@ option {
 
 .portfolio .single-pf {
     position: relative;
-    width: 330px; /* Set a fixed width for all portfolio items */
+    width: 430px; /* Set a fixed width for all portfolio items */
     height: 350px; /* Set a fixed height for all portfolio items */
     overflow: hidden;
 }
